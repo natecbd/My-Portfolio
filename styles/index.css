@@ -1,0 +1,65 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+body {
+    min-height: 100%;
+    background: rgba(70,70,70, 1);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    min-height: 600px;
+    background-image: url(../assets/images/kitten.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+ 
+.hero-content .hero-title {
+    top: 40%;
+    position: absolute;
+    -webkit-transform: translateY(-150%);
+    -moz-transform: translateY(-150%);
+    transform: translateY(-150%);
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
+}
+
+.hero-kitten { 
+    position: absolute;
+    -webkit-transform: translateY(800%);
+    -moz-transform: translateY(800%);
+    transform: translateY(800%);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
+}
+
+.circular-image img { 
+    -webkit-border-radius: 150px; 
+    -moz-border-radius: 150px; 
+    -ms-border-radius: 150px; 
+    -o-border-radius: 150px; 
+    border-radius: 150px; }
