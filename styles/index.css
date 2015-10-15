@@ -11,7 +11,7 @@ html {
 
 body {
     min-height: 100%;
-    background: #bbbb;
+    background: #DEDEDE;
     color: white;
     text-align: center;
 }
@@ -19,16 +19,36 @@ body {
 .only-this-big {
     max-width: 1440px;
     margin: 0 auto;
-    background-color: #959595;
 }
 
 .outside-border {
-    box-shadow: 18px 0 rgba(0, 0, 0, 0.075), 1px 0 rgba(0, 0, 0, 0.1), -18px 0 rgba(0, 0, 0, 0.075), -1px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+  box-shadow: 18px 0 rgba(0, 0, 0, 0.075), 1px 0 rgba(0, 0, 0, 0.1), -18px 0 rgba(0, 0, 0, 0.075), -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.everything-else {
+    position: absolute;
+    top: 90%;
+    width: 100vw;
+    background-color: #333333;
+}
+
+.nav-color {
+    position: fixed;
+    background-color: rgb(51, 51, 51);
+    opacity: .95;
+    top: 0%;
+    width: 100%;
+    height: 50px;
+    z-index: 999;
 }
 
 .nav-bar {
     position: fixed;
-    background-color: transparent;
     top: 0%;
     width: 100%;
     height: 50px;
@@ -38,6 +58,7 @@ body {
     overflow: hidden;
     font-size: 30px;
     -webkit-user-select: none;
+    z-index: 999;
 }
 
 .nav-item {
@@ -55,6 +76,9 @@ body {
     font-weight: bold;
     color: white;
     width: auto;
+    animation-name: faderight;
+    animation-duration: 3s;
+    text-shadow: 1.5px 1.5px 0px #333333;
 }
 
 .nav-link {
@@ -63,51 +87,51 @@ body {
     font-weight: bold;
     text-transform: capitalize;
     color: white;
-    width: 220px;
+    width: 250px;
+    text-shadow: 1.5px 1.5px 0px #333333;
 }
 
 /*kitten picture will be changed later, i like this style best: http://erwandorgeville.com/*/
 .kitten-background {
-    position: relative;
+    position: fixed;
+    top: 0px;
     height: 90vh;
+    width: 100%;
     background-image: url(../assets/images/kitten-reblur.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    
+    z-index: 0;
 }
  
 .this-is-me {
     top: 70%;
-    position: absolute;
+    position: fixed;
     -webkit-transform: translateY(-150%);
     -moz-transform: translateY(-150%);
     transform: translateY(-150%);
-    max-width: 1500px;
     width: 100%;
     font-size: 3.5vw;
     text-align: center;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 0px rgb(58,23,63);
+    text-shadow: 2px 2px 0px #333333;
     
 }
 
-
 .this-is-kitten { 
-    top: 69%;
-    position: absolute;
-    max-width: 1500px;
+    top: 70%;
+    position: fixed;
     width: 100%;
     font-size: 2.5vw;
     text-align: center;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    text-shadow: 1px 1px 0px rgb(58,23,63);
+    text-shadow: 1.25px 1.25px 0px #333333;
 }
-
+/*
 .face { 
     -webkit-border-radius: 50%; 
     -moz-border-radius: 50%; 
@@ -117,11 +141,11 @@ body {
     height: 17vw;
     width: 17vw
 }
+*/
 
 .inline { 
     display: inline-block;
     float: right;
-/*    width: 100%;*/
 }
 
 .my-face {
@@ -131,9 +155,11 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/*
 .kitten-face {
-/*    transform: translateY(200%);*/
+    transform: translateY(200%);
 }
+*/
 
 .social-media {
     text-decoration: none;
@@ -143,6 +169,77 @@ body {
 
 .find-me {
     text-align: center;
+}
+
+a { 
+    text-decoration: none; 
+    color: white;
+}
+
+#nate span:nth-of-type(1) {
+    opacity: 0;
+    transition-duration: .1s;
+    transition-delay:.2s;
+}
+
+#nate span:nth-of-type(2) {
+    opacity: 0;
+    transition-duration: .1s;
+    transition-delay: .133s;
+}
+
+#nate span:nth-of-type(3) {
+    opacity: 0;
+    transition-duration: .1s;
+    transition-delay: .066s;
+}
+
+#nate span:nth-of-type(4) {
+    opacity: 0;
+    transition-duration: .1s;
+    transition-delay: 0s;
+}
+
+.CBD:hover #nate span:nth-of-type(1){
+    opacity: 1;
+    transition-duration: .5s;
+    transition-delay: 0s;
+}
+
+.CBD:hover #nate span:nth-of-type(2){
+    opacity: 1;
+    transition-duration: .433s;
+    transition-delay: .066s;
+}
+
+.CBD:hover #nate span:nth-of-type(3){
+    opacity: 1;
+    transition-duration: .316s;
+    transition-delay: .133s;
+}
+
+.CBD:hover #nate span:nth-of-type(4){
+    opacity: 1;
+    transition-duration: .3s;
+    transition-delay: .2s;
+}
+
+#cbd {
+    transition-duration: .5s;
+    margin: -89.65px;
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+.CBD:hover #cbd {
+    margin: 0px;
+}
+
+
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @media (max-width: 50rem) {
