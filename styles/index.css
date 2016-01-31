@@ -58,9 +58,9 @@ body {
 
 .everything-else {
     position: absolute;
-    top: 120%;
+    top: 100%;
     width: 100%;
-    margin-top: 350px;
+    margin-top: 80vh;
     background-color: white;
 }
 
@@ -210,20 +210,19 @@ body {
     text-align: center;
 }
 
-.ups {
+.i-am-a-web-dev {
     display: block;
     position: relative;
-    margin-left: 50px;
-    margin-right: 50px;
-/*    z-index: 20;*/
+/*    margin-left: 50px;*/
+/*    margin-right: 50px;*/
+    width: 100%;
 }
 
 .divider {
-    top: 120%;
-
+    top: 100%;
     width: 100%;
     position: absolute;
-    height: 350px;
+    height: 80vh;
 }
 
 a { 
