@@ -46,11 +46,6 @@ body {
     );
 }
 
-/*.only-this-big {*/
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 .outside-border {
     position: fixed;
     top: 0;
@@ -225,7 +220,7 @@ body {
 .divider {
     top: 120%;
     margin-top: -350px;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     height: 350px;
 }
