@@ -16,8 +16,6 @@ html {
 
 body {
     min-height: 100%;
-    background: white;
-    color: black;
     font-size: 30px;
     text-align: center;
 }
@@ -213,8 +211,6 @@ body {
 .i-am-a-web-dev {
     display: block;
     position: relative;
-/*    margin-left: 50px;*/
-/*    margin-right: 50px;*/
     width: 100%;
 }
 

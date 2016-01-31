@@ -2,7 +2,7 @@ $(document).ready(function () {
  
 
 var waypointJams = new Waypoint({
-    element: $('.ups'),
+    element: $('.i-am-a-web-dev'),
     handler: function(direction) {
     if(direction === "down") {
         $('.nav-color').css("animation-name","fade-in")
