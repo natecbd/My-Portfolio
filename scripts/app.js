@@ -11,7 +11,7 @@ var waypointJams = new Waypoint({
         $('.nav-color').css("animation-name","fade-out")
     }
   },
-    offset: '200px'
+    offset: '250px'
 })
 
 var waypointBand = new Waypoint({
@@ -23,9 +23,21 @@ var waypointBand = new Waypoint({
         $('.nav-color').css("animation-name","crimson-to-purple")
     }
   },
-    offset: '200px'
+    offset: '400px'
+})
+
+var waypointWebDev = new Waypoint({
+    element: $('.divider'),
+    handler: function(direction) {
+    if(direction === "down") {
+        $('.i-am-a-web-dev').css("animation-name","fade-in, fade-up-super")
+    } else if(direction === "up") {
+        $('.i-am-a-web-dev').css("animation-name","fade-out, fade-down-super")
+    }
+  }
+//    offset: '200px'
 })
 
 $('nav.nav-bar a').smoothScroll();
-   
+
 });
