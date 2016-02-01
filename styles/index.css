@@ -99,9 +99,11 @@ body {
     display: inline-block;
 }
 
+/*
 .contact-link {
     margin-right: 60px;
 }
+*/
 
 .CBD {
     margin-left: 80px;
@@ -150,7 +152,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     color: white;
-    text-shadow: 2px 2px 0px #0033CC;
+    text-shadow: 2px 2px 0px #333333;
     animation-name: fade-in, fadeup;
     animation-delay: 1.5s;
     animation-duration: .5s;
@@ -169,7 +171,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     color: white;
-    text-shadow: 1.25px 1.25px 0px #0033CC;
+    text-shadow: 1.25px 1.25px 0px #333333;
     animation-name: fade-in, fade-up;
     animation-delay: 2.5s;
     animation-duration: 2s;
@@ -481,6 +483,35 @@ a {
         margin-left: 1vw;
         width: 75vw;
     }
+}
+
+@media (max-width: 800px) {
+    .nav-color, .nav-bar, .this-is-me, .this-is-kitten {
+        position: absolute;
+    }
     
+    .this-is-me {
+        font-size: 25px;
+    }
     
+    .this-is-kitten {
+        font-size: 10px;
+    }
+    
+    .CBD {
+        margin-left: 5px;
+    }
+    
+    .CBD:before {
+        left: 5px;
+    }
+    
+    .nav-item {
+        margin-left: 1.5px;
+        margin-right: 2.5px;
+    }
+    
+    .navb, .navc {
+        font-size: 15px;
+    }
 }
