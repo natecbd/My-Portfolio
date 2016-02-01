@@ -23,7 +23,7 @@ var waypointBand = new Waypoint({
         $('.nav-color').css("animation-name","crimson-to-purple")
     }
   },
-    offset: '400px'
+    offset: '275px'
 })
 
 var waypointWebDev = new Waypoint({
@@ -35,9 +35,9 @@ var waypointWebDev = new Waypoint({
         $('.i-am-a-web-dev').css("animation-name","fade-out, fade-down-super")
     }
   }
-//    offset: '200px'
 })
 
-$('nav.nav-bar a').smoothScroll();
+$('.nav-bar a').smoothScroll();
+$('.nav-bar .navb').smoothScroll({offset: 350});
 
 });
