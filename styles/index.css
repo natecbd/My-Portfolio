@@ -179,13 +179,11 @@ body {
 .aboutme {
     position: relative;
     height: 750px;
-    padding-left: 25px;
+    padding: 5vw;
 }
 
 .about-img {
-/*    padding-top: 25px;*/
-/*    padding-bottom: -25px;*/
-    max-height: 400px;
+    max-width: 40vw;
     height: auto;
     float: left;
 
@@ -194,10 +192,10 @@ body {
 .about-text {
     text-align: center;
     vertical-align: middle;
-    margin-left: 750px;
-    margin-right: 25px;
+    margin-left: 45vw;
+/*    margin-right: 5vw;*/
     padding: 25px;
-    height: 400px;
+    width: 42.5vw;
     border-radius: 25px;
     background: #e6e6e6;
     flex-wrap: wrap;
@@ -218,10 +216,13 @@ body {
     position: relative;
     width: 100%;
     vertical-align: bottom;
-    height: 300px;
     opacity: 0;
     animation-fill-mode: forwards;
     animation-duration: 2s;
+}
+
+.bloc-title {
+/*    font-family: 'Passion One', Cursive;*/
 }
 
 .divider {
@@ -461,6 +462,30 @@ a {
     100%{ margin-top: 40px; }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
+    .about-text {font-size: 20px}
+}
+
+@media (max-width: 1000px) {
     
+    .about-img {
+        display: relative;
+        max-width: 75vw;
+        height: auto;
+/*        float: left;*/
+        margin-left: 7vw;
+    }
+
+    .about-text {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 1vw;
+/*        margin-right: 5vw;*/
+        padding: 25px;
+        width: 75vw;
+        border-radius: 25px;
+        background: #e6e6e6;
+        flex-wrap: wrap;
+    }
 }
