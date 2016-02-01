@@ -183,7 +183,7 @@ body {
 }
 
 .about-img {
-    max-width: 40vw;
+    max-width: 42.5vw;
     height: auto;
     float: left;
 
@@ -192,8 +192,7 @@ body {
 .about-text {
     text-align: center;
     vertical-align: middle;
-    margin-left: 45vw;
-/*    margin-right: 5vw;*/
+    margin-left: 47.5vw;
     padding: 25px;
     width: 42.5vw;
     border-radius: 25px;
