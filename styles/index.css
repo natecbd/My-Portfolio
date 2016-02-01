@@ -208,6 +208,7 @@ body {
 
 .find-me {
     text-align: center;
+    padding: 5vw;
 }
 
 .i-am-a-web-dev {
@@ -463,28 +464,23 @@ a {
 
 @media (max-width: 1300px) {
     .about-text {font-size: 20px}
+    .find-me, .ups {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1000px) {
     
     .about-img {
-        display: relative;
         max-width: 75vw;
-        height: auto;
-/*        float: left;*/
         margin-left: 7vw;
     }
 
     .about-text {
         display: inline-block;
-        text-align: center;
-        vertical-align: middle;
         margin-left: 1vw;
-/*        margin-right: 5vw;*/
-        padding: 25px;
         width: 75vw;
-        border-radius: 25px;
-        background: #e6e6e6;
-        flex-wrap: wrap;
     }
+    
+    
 }
