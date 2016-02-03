@@ -1,5 +1,11 @@
 $(document).ready(function () {
- 
+
+//var cbdStartTimer = setTimout(function() {
+//    $('nav .CBD').addClass('hover');
+//}, 5000);
+//var cbdStopTimer = setTimeout(function() {
+//    $('nav .CBD').removeClass('hover');
+//}, 7000);
 
 var waypointJams = new Waypoint({
     element: $('.i-am-a-web-dev'),

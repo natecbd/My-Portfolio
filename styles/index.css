@@ -125,53 +125,90 @@ body {
 
 .kitten-background {
     position: fixed;
-    top: 0px;
     height: 100vh;
     width: 100%;
     background-image: url(../assets/images/stupid-safari-wont-show-jpgs.png);
-    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    z-index: 0;
 }
  
 .this-is-me {
-    top: 75%;
+    top: 30%;
     position: fixed;
-    -webkit-transform: translateY(-150%);
-    -moz-transform: translateY(-150%);
-    transform: translateY(-150%);
+/*    -webkit-transform: translateY(-150%);*/
+/*    -moz-transform: translateY(-150%);*/
+/*    transform: translateY(-150%);*/
     width: 100%;
-    opacity: 0;
-    font-size: 3.5vw;
-    text-align: center;
+/*    opacity: 0;*/
+/*    font-size: 3.5vw;*/
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     color: white;
     text-shadow: 2px 2px 0px #333333;
+/*
     animation-name: fade-in, fadeup;
     animation-delay: 1.5s;
     animation-duration: .5s;
     animation-fill-mode: forwards;
-    
+*/
 }
 
 .this-is-kitten { 
-    top: 75%;
+    top: 65%;
     position: fixed;
     width: 100%;
-    opacity: 0;
-    font-size: 2.5vw;
-    text-align: center;
+/*    opacity: 0;*/
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     color: white;
     text-shadow: 1.25px 1.25px 0px #333333;
+/*
     animation-name: fade-in, fade-up;
     animation-delay: 2.5s;
     animation-duration: 2s;
+    animation-fill-mode: forwards;
+*/
+}
+
+.title1 {
+    opacity: 0;
+    animation-name: fade-in, fadeup;
+    animation-delay: 2s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.title2 {
+    opacity: 0;
+    animation-name: fade-in, fadeup;
+    animation-delay: 2.5s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.title3 {
+    opacity: 0;
+    animation-name: fade-in, fadeup;
+    animation-delay: 3s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.title4 {
+    opacity: 0;
+    animation-name: fade-in, fadeup;
+    animation-delay: 4s;
+    animation-duration: 1.75s;
+    animation-fill-mode: forwards;
+}
+
+.title5 {
+    opacity: 0;
+    animation-name: fade-in, fadeup;
+    animation-delay: 4.25s;
+    animation-duration: 1.75s;
     animation-fill-mode: forwards;
 }
 
@@ -312,8 +349,6 @@ a {
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
-
-
 
 #nate span:nth-of-type(1) {
     opacity: 0;
