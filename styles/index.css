@@ -524,11 +524,7 @@ a {
         position: absolute;
     }
     
-    .this-is-me {
-        font-size: 25px;
-    }
-    
-    .this-is-kitten {
+    .this-is-me, .this-is-kitten {
         font-size: 25px;
     }
     
@@ -547,5 +543,30 @@ a {
     
     .navb, .navc {
         font-size: 15px;
+    }
+}
+
+@media (max-height: 500px) {
+    .this-is-me, .this-is-kitten {
+        font-size: 20px;
+        line-height: 10px;
+    }
+}
+
+@media (max-height: 300px) {
+    .this-is-me, .this-is-kitten {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 200px) {
+    .this-is-me, .this-is-kitten {
+        font-size: 10px;
+    }
+}
+
+@media (max-height: 150px) {
+    .this-is-me, .this-is-kitten {
+        line-height: 2px;
     }
 }
