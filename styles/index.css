@@ -172,9 +172,13 @@ body {
 */
 }
 
+.fade-in-up {
+    animation-name: fade-in, fadeup;
+}
+
 .title1 {
     opacity: 0;
-    animation-name: fade-in, fadeup;
+/*    animation-name: fade-in, fadeup;*/
     animation-delay: 2s;
     animation-duration: .5s;
     animation-fill-mode: forwards;
@@ -182,7 +186,7 @@ body {
 
 .title2 {
     opacity: 0;
-    animation-name: fade-in, fadeup;
+/*    animation-name: fade-in, fadeup;*/
     animation-delay: 2.5s;
     animation-duration: .5s;
     animation-fill-mode: forwards;
@@ -190,7 +194,7 @@ body {
 
 .title3 {
     opacity: 0;
-    animation-name: fade-in, fadeup;
+/*    animation-name: fade-in, fadeup;*/
     animation-delay: 3s;
     animation-duration: .5s;
     animation-fill-mode: forwards;
@@ -198,7 +202,7 @@ body {
 
 .title4 {
     opacity: 0;
-    animation-name: fade-in, fadeup;
+/*    animation-name: fade-in, fadeup;*/
     animation-delay: 4s;
     animation-duration: 1.75s;
     animation-fill-mode: forwards;
@@ -206,7 +210,7 @@ body {
 
 .title5 {
     opacity: 0;
-    animation-name: fade-in, fadeup;
+/*    animation-name: fade-in, fadeup;*/
     animation-delay: 4.25s;
     animation-duration: 1.75s;
     animation-fill-mode: forwards;
@@ -293,7 +297,7 @@ a {
 .navb, .navc {
     opacity: 0;
     color: white;
-    animation-name: fade-in, fade-up;
+/*    animation-name: fade-in, fade-up;*/
     animation-duration: .75s;
     animation-fill-mode: forwards;
 }
@@ -348,6 +352,10 @@ a {
 .hvr-underline-reveal:hover:before, .hvr-underline-reveal:hover {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+}
+
+.fade-in {
+    animation-name: fade-in;
 }
 
 #nate span:nth-of-type(1) {
@@ -407,7 +415,7 @@ a {
     opacity: 0;
     animation-duration: 1s;
     animation-delay: 0s;
-    animation-name: fade-in;
+/*    animation-name: fade-in;*/
     animation-fill-mode: both;
 }
 
@@ -415,7 +423,7 @@ a {
     opacity: 0;
     animation-duration: 1s;
     animation-delay: .25s;
-    animation-name: fade-in;
+/*    animation-name: fade-in;*/
     animation-fill-mode: both;
 }
 
@@ -423,7 +431,7 @@ a {
     opacity: 0;
     animation-duration: 1s;
     animation-delay: .5s;
-    animation-name: fade-in;
+/*    animation-name: fade-in;*/
     animation-fill-mode: both;
     transition-duration: .25s;
 }

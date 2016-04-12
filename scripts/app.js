@@ -1,11 +1,16 @@
 $(document).ready(function () {
 
-//var cbdStartTimer = setTimout(function() {
-//    $('nav .CBD').addClass('hover');
-//}, 5000);
-//var cbdStopTimer = setTimeout(function() {
-//    $('nav .CBD').removeClass('hover');
-//}, 7000);
+$(".title1").addClass("fade-in-up");
+$(".title2").addClass("fade-in-up");
+$(".title3").addClass("fade-in-up");
+$(".title4").addClass("fade-in-up");
+$(".title5").addClass("fade-in-up");
+$(".navb").addClass("fade-in-up");
+$(".navc").addClass("fade-in-up");
+$("#cbd span:nth-of-type(1)").addClass("fade-in");
+$("#cbd span:nth-of-type(2)").addClass("fade-in");
+$("#cbd span:nth-of-type(3)").addClass("fade-in");
+//$("").addClass("");
 
 var waypointJams = new Waypoint({
     element: $('.i-am-a-web-dev'),
