@@ -226,7 +226,8 @@ body {
     max-width: 42.5vw;
     height: auto;
     float: left;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-text {
@@ -516,13 +517,16 @@ a {
 @media (max-width: 1000px) {
     
     .about-img {
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
         max-width: 75vw;
-        margin-left: 5vw;
     }
 
     .about-text {
         display: inline-block;
-        margin-left: 0vw;
+        margin-left: auto;
         width: 75vw;
     }
 }
