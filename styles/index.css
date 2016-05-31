@@ -542,6 +542,7 @@ a {
     
     .CBD {
         left: 5px;
+        margin-left: 5px;
     }
     
     .CBD:before {
