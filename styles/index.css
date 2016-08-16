@@ -136,7 +136,7 @@ body {
     position: fixed;
     height: 100vh;
     width: 100%;
-    background-image: url(../assets/images/stupid-safari-wont-show-jpgs.png);
+/*    background-image: url(../assets/images/stupid-safari-wont-show-jpgs.png);  */
     background-position: center center;
     background-size: cover;
 }
