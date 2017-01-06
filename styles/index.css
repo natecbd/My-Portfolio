@@ -97,7 +97,6 @@ body {
 }
 
 .nav-item {
-    
     float: right;
     text-align: left;
     vertical-align: middle;
@@ -110,7 +109,6 @@ body {
 }
 
 .CBD {
-    
     margin-left: 80px;
     height: 70px;
     float: left;
@@ -121,7 +119,6 @@ body {
 }
 
 .initials {
-    
     color: white;
 }
 
@@ -142,7 +139,7 @@ body {
 }
  
 .this-is-me {
-    top: 30%;
+    top: 20%;
     position: fixed;
     width: 100%;
     font-weight: 300;
@@ -153,7 +150,7 @@ body {
 }
 
 .this-is-kitten { 
-    top: 65%;
+    top: 55%;
     position: fixed;
     width: 100%;
     font-weight: 300;
