@@ -2,81 +2,32 @@
 
 
 <html>
-<head>
+  <head>
     <title>Natecbd</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="prefetch" href="../assets/images/stupid-safari-wont-show-jpgs.png">
+
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/nav.css">
+    <link rel="stylesheet" type="text/css" href="styles/background.css">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-<!--    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href='styles/index.css'>
-    
-</head>
-<body>
-    <div id='home'></div>
-    <div class='kitten-background'></div>
-    <div class='nav-color '></div>
-    <nav class="nav-bar">
-        <li class="nav-item CBD">
-            <a clas="nav-link nava" href="#home"> 
-                 <span class="initials" id='nate'><span>N</span><span>A</span><span>T</span><span>E</span></span><span class="initials" id='cbd'><span>C</span><span>B</span><span>D</span></span> 
-            </a>
-        </li>
-        <li class="nav-item hvr-underline-reveal"><a class="nav-link navc opening-animation2" href="#contact">Contact</a></li>
-        <li class="nav-item hvr-underline-reveal"><a class="nav-link navb opening-animation2" href="#about">About</a></li>
-    </nav>
-    <div class='this-is-me'>
-        <p class='title1 opening-animation1'>This is</p>
-        <p class='title2 opening-animation1'>a</p>
-        <p class='title3 opening-animation1'>Webpage</p>
+  </head>
+  <body>
+    <div class="bg">
+      <pre class="inline" id="cssBG"></pre>
+      <pre class="inline" id="htmlBG"></pre>
+      <pre class="inline" id="jsBG"></pre>
+      <nav class="nav-bar">
+        <li class="nav-item hvr-underline-reveal"><a class="nav-link navc fade-in-up" href="#contact">Contact</a></li>
+        <li class="nav-item hvr-underline-reveal"><a class="nav-link navb fade-in-up" href="#about">About</a></li>
+        <!-- <li class="nav-item hvr-underline-reveal"><a class="nav-link nava fade-in-up" href="draft.html">Draft</a></li> -->
+      </nav>
+      <div id="page-build-panel" class="center-screen"></div>
+      <div id="page-build" class="center-screen">
+        <a class="inline left" href="bootstrap.html"><h2><b>&lt;</b></h2></a>
+        <h2 class="inline middle">This page is built with &lt;/html&gt;, CSS, and JavaScript.</h2>
+        <a class="inline right" href="bootstrap.html"><h2><b>&gt;</b></h2></a>
+      </div>
     </div>
-    <div class='this-is-kitten'>
-        <p class='title4 opening-animation1'></p>
-        <p class='title5 opening-animation1'></p>
-    </div>
-    
-    <div id='about' class="divider gradient "></div>
-    
-    <div class='everything-else'>
-        <div id='about'>
-        <h2 class='i-am-a-web-dev'>I AM A WEB DEVELOPER LIVING</h2>
-        <h2 class='i-am-a-web-dev'>IN SEATTLE, WA</h2>
-        
-        <div class="aboutme bloc">
-           <!-- <h3 class='bloc title'>A JUMP START</h3>
-            <div class='bloc-button'>Bloc Jams</div>
-            <img src="assets/images/Bloc-Jams-Colors.png" class="about-img">
-            <p class="about-text">I started my developer career by studying at bloc.io, a program that pairs students with an expert in their field. I completed their Front-End Web Developement course in November of 2015. The site pictured is Bloc Jams, a simple music player with a focus on UI optimization and design. 
-            </p>
-        </div>
-            
-        <div class="aboutme cascade">
-            <p>cascadebands.com</p>
-            <h3>FIRST PROJECT</h3>
-            <a href="http://www.cascadebands.com">
-                <img src="assets/images/CascadeBands.png" class="about-img">
-            </a>
-            <p class='about-text'>During my time at Bloc I was approached by the Cascade Band Boosters to fix their dying website and fill their Webmaster position. They built the original website using Joomla, a powerful CMS but was not user friendly enough for their rotating staff of volunteer parents. After the site broke I rebuilt everything in Wordpress and taught them how to manage and update their content.
-            </p>
-        </div>
-            -->
-<!--        <p class='ups'>For the last three years I have been working with the UPS North Seattle Dispatch team as their PM Operations Management Specialist where I was in charge of 90-150 drivers on a daily basis, organizing meet ups an deliveries all over the city.</p>-->
-        </div>
-        <div  id='contact' class='contact-space'>
-            <p>  
-                </br>
-                You can find me at these places: <a class="social-media" href='https://github.com/natecbd'>Github</a>, <a class="social-media" href='https://www.linkedin.com/in/natecbd'>Linkedin</a>, or <a class="social-media" href='https://twitter.com/natecbd'>Twitter</a> using the tag natecbd.
-            </p>
-            <p>
-                Additionally you can send me an email at natecbd@gmail.com
-            </p>
-        </div>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="scripts/imakewebthings-waypoints-0944e15/lib/jquery.waypoints.min.js"></script>
-    <script src="scripts/smooth-scroll.js"></script>
     <script src="scripts/app.js"></script>
-</body>
+  </body>
 </html>
