@@ -1,0 +1,54 @@
+body {
+  background-color: #151516;
+  color: white;
+}
+
+#cssBG, #htmlBG, pre {
+  display: inline-block;
+  height: 100%;
+  padding: 9.5px;
+  margin: 0px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: white;
+  overflow: hidden;
+  background-color: #151516;
+  border: 0;
+  border-radius: 0px;
+  /* opacity: .85; */
+}
+
+#htmlBG {
+  width: 40%;
+}
+
+#cssBG {
+  width: 20%;
+}
+
+.target {
+  color: #DCDCAA;
+  /* color: #DCDCAA; */
+}
+
+.primary {
+  color: #CE9178;
+}
+
+.character {
+  /* color: #569cd6; */
+  color: #9CDCFE;
+}
+
+.value {
+  /* color: #4EC9B0; */
+  color: #d5edad;
+}
+
+.control {
+  color: #545454;
+}
+
+.tag {
+  color: #569cd6;
+}
