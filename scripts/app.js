@@ -83,7 +83,7 @@ window.onload = function(){
       htmlBG +='\n          <span class="control">&lt;</span><span class="tag">h3</span><span class="control">&gt;</span><span class="tag">&amp;lt;</span><span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;</span><span class="tag">h3</span> <span class="character">class</span>=<span class="primary">"col-sm-10"</span><span class="control">&gt;</span>'
-      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">b</span><span class="control">&gt;</span>This page is built with <span class="tag">&amp;lt;</span>/html<span class="tag">&amp;gt;</span>, CSS, and Javascript.<span class="control">&lt;/</span><span class="tag">b</span><span class="control">&gt;</span>'
+      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">b</span><span class="control">&gt;</span>This page is built with <span class="tag">&amp;lt;</span>/html<span class="tag">&amp;gt;</span>, CSS, <span class="tag">&amp;amp;</span> Javascript.<span class="control">&lt;/</span><span class="tag">b</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;</span><span class="tag">a</span>  <span class="character">class</span>=<span class="primary">"col-sm-1" </span><span class="character">href</span>=<span class="primary">"index.html"</span><span class="control">&gt;</span>'
       htmlBG +='\n          <span class="control">&lt;</span><span class="tag">h3</span><span class="control">&gt;</span><span class="tag">&amp;gt;</span><span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
@@ -97,25 +97,24 @@ window.onload = function(){
 
   var javaBG = '\n\n<span class="tag">function</span> <span class="target">type</span>(<span class="character">code</span>, <span class="character">i</span>, <span class="character">background</span>, <span class="character">target</span>, <span class="character">blinker</span>) {'
       javaBG +='\n  <span class="tag">var</span> <span class="character">char</span> = <span class="primary">""</span>;'
-      javaBG +='\n  <span class="tag">var</span> <span class="character">nextChar</span> = <span class="character">code</span>.<span class="target">charAt</span>(<span class="character">i</span>)'
+      javaBG +='\n  <span class="tag">var</span> <span class="character">nextChar</span> = <span class="character">code</span>.<span class="target">charAt</span>(<span class="character">i</span>);'
       javaBG +='\n  <span class="logic">if</span>(<span class="character">nextChar</span> == <span class="primary">"<"</span>) {'
       javaBG +='\n    <span class="logic">for</span>(<span class="character">i</span>; <span class="character">code</span>.<span class="target">charAt</span>(<span class="character">i</span>) != <span class="primary">">"</span>; <span class="character">i</span>++) {'
-      javaBG +='\n      <span class="character">char</span> += <span class="character">code</span>.<span class="target">charAt</span>(<span class="character">i</span>)'
+      javaBG +='\n      <span class="character">char</span> += <span class="character">code</span>.<span class="target">charAt</span>(<span class="character">i</span>);'
       javaBG +='\n    }'
       javaBG +='\n    <span class="character">char</span> += <span class="primary">">"</span>;'
       javaBG +='\n  } <span class="logic">else</span> {'
-      javaBG +='\n    <span class="character">char</span> = <span class="character">nextChar</span>'
+      javaBG +='\n    <span class="character">char</span> = <span class="character">nextChar</span>;'
       javaBG +='\n  }'
       javaBG +='\n  <span class="character">background</span> += <span class="character">char</span>;'
-      javaBG +='\n'
       javaBG +='\n  <span class="character">target</span>.<span class="character">innerHTML</span> = <span class="character">background</span>+(<span class="character">char</span>==<span class="primary">"</span><span class="value">\\t</span><span class="primary">"</span>||<span class="character">char</span>==<span class="primary">"</span><span class="value">\\n</span><span class="primary">"</span>?<span class="primary">""</span>:<span class="primary">"|"</span>);'
       javaBG +='\n  <span class="logic">if</span>(<span class="character">i</span> < <span class="character">code</span>.<span class="character">length</span>) {'
       javaBG +='\n    <span class="target">setTimeout</span>(() <span class="tag">=></span> {'
-      javaBG +='\n      <span class="target">type</span>(<span class="character">code</span>, <span class="character">i</span>+1, <span class="character">background</span>, <span class="character">target</span>, <span class="character">blinker</span>)'
+      javaBG +='\n      <span class="target">type</span>(<span class="character">code</span>, <span class="character">i</span>+<span class="value">1</span>, <span class="character">background</span>, <span class="character">target</span>, <span class="character">blinker</span>);'
       javaBG +='\n    }, <span class="value">5</span>);'
       javaBG +='\n  } <span class="logic">else</span> {'
-      javaBG +='\n    <span class="character">target</span>.<span class="character">innerHTML</span> = <span class="character">background</span>'
-      javaBG +='\n    <span class="target">blink</span>(<span class="character">document</span>.<span class="target">getElementById</span>(<span class="character">blinker</span>))'
+      javaBG +='\n    <span class="character">target</span>.<span class="character">innerHTML</span> = <span class="character">background</span>;'
+      javaBG +='\n    <span class="target">blink</span>(<span class="character">document</span>.<span class="target">getElementById</span>(<span class="character">blinker</span>));'
       javaBG +='\n    <span class="tag">function</span> <span class="target">blink</span>(<span class="character">target</span>) {'
       javaBG +='\n      <span class="logic">if</span> (<span class="character">target</span>.<span class="character">style</span>.<span class="character">display</span> === <span class="primary">"none"</span>) {'
       javaBG +='\n        <span class="character">target</span>.<span class="character">style</span>.<span class="character">display</span> = <span class="primary">"inline-block"</span>;'
@@ -138,7 +137,7 @@ window.onload = function(){
       }
       char += '>';
     } else {
-      char = nextChar
+      char = nextChar;
     }
     background += char;
 
@@ -162,7 +161,6 @@ window.onload = function(){
           }, 500);
         }
       }
-      
     }
   }
   
