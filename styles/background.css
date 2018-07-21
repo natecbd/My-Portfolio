@@ -26,13 +26,20 @@ body {
   width: 20%;
 }
 
+#javaBG {
+  width: 30%
+}
+
+.comment {
+  color: #085b34;
+}
 .target {
   color: #DCDCAA;
   /* color: #DCDCAA; */
 }
 
 .primary {
-  color: #CE9178;
+  color: rgb(216, 160, 137);
 }
 
 .character {
@@ -47,6 +54,10 @@ body {
 
 .control {
   color: #545454;
+}
+
+.logic {
+  color: #843ca8;
 }
 
 .tag {
