@@ -3,12 +3,12 @@ body {
   color: white;
 }
 
-#cssBG, #htmlBG, pre {
+#cssBG, #htmlBG, #javaBG, pre {
   display: inline-block;
   height: 100%;
   padding: 9.5px;
   margin: 0px;
-  font-size: 13px;
+  font-size: .8vw;
   line-height: 1.42857143;
   color: white;
   overflow: hidden;
