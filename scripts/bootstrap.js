@@ -91,7 +91,7 @@ $(function () {
       htmlBG +='\n          <span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;</span><span class="tag">h3</span> <span class="character">class</span>=<span class="primary">"col-sm-10"</span><span class="control">&gt;</span>'
-      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">b</span><span class="control">&gt;</span>This page is built with <span class="tag">&amp;lt;</span>/html<span class="tag">&amp;gt;</span>, CSS, Javascript, and Bootstrap.<span class="control">&lt;/</span><span class="tag">b</span><span class="control">&gt;</span>'
+      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">b</span><span class="control">&gt;</span>This page is built with <span class="tag">&amp;lt;</span>/html<span class="tag">&amp;gt;</span>, CSS, Javascript, <span class="tag">&amp;amp;</span> Bootstrap.<span class="control">&lt;/</span><span class="tag">b</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;</span><span class="tag">a</span>  <span class="character">class</span>=<span class="primary">"col-sm-1" </span><span class="character">href</span>=<span class="primary">"index.html"</span><span class="control">&gt;</span>'
       htmlBG +='\n          <span class="control">&lt;</span><span class="tag">h3</span><span class="control">&gt;</span>'
