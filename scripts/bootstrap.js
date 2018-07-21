@@ -57,11 +57,11 @@ $(function () {
       htmlBG +='\n<span class="control">&lt;</span><span class="tag">head</span><span class="control">&gt;</span>'
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">title</span><span class="control">&gt;</span>Natecbd<span class="control">&lt;/</span>title<span class="control">&gt;</span>'
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">meta</span> <span class="character">name</span>=<span class="primary">"viewport"</span> <span class="character">content</span>=<span class="primary">"width=device-width, initial-scale=1, user-scalable=no"</span><span class="control">&gt;</span>'
-      htmlBG +='\n  <span class="control">&lt;</span>!--  Styles  --<span class="control">&gt;</span>'
+      htmlBG +='\n  <span class="comment">&lt;!--  Styles  --&gt;</span>'
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">link</span> <span class="character">rel</span>=<span class="primary">"stylesheet"</span> <span class="character">href</span>=<span class="primary">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span><span class="control">&gt;</span>'
-      htmlBG +='\n  <span class="control">&lt;</span>!-- jQuery library --<span class="control">&gt;</span>'
+      htmlBG +='\n  <span class="comment">&lt;!-- jQuery library --&gt;</span>'
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">script</span> <span class="character">src</span>=<span class="primary">"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">script</span><span class="control">&gt;</span>'
-      htmlBG +='\n  <span class="control">&lt;</span>!-- Latest compiled JavaScript --<span class="control">&gt;</span>'
+      htmlBG +='\n  <span class="comment">&lt;!-- Latest compiled JavaScript --&gt;</span>'
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">script</span> <span class="character">src</span>=<span class="primary">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">script</span><span class="control">&gt;</span>'
       htmlBG +='\n  '
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">link</span> <span class="character">rel</span>=<span class="primary">"stylesheet"</span> <span class="character">type</span>=<span class="primary">"text/css"</span><span class="character"> href</span>=<span class="primary">"styles/nav.css"</span><span class="control">&gt;</span>'
@@ -105,6 +105,75 @@ $(function () {
       htmlBG +='\n<span class="control">&lt;/</span><span class="tag">body</span><span class="control">&gt;</span>'
       htmlBG +='\n<span class="control">&lt;/</span><span class="tag">html</span><span class="control">&gt;</span>'
 
-  $("#htmlBG").html(htmlBG)
-  $("#cssBG").html(cssBG)
+  var javaBG = '\n\n<span class="tag">function</span> <span class="target">type</span>(<span class="character">code</span>, <span class="character">i</span>, <span class="character">background</span>, <span class="character">target</span>, <span class="character">blinker</span>) {'
+      javaBG +='\n  <span class="tag">var</span> <span class="character">char</span> = <span class="primary">""</span>;'
+      javaBG +='\n  <span class="tag">var</span> <span class="character">nextChar</span> = <span class="character">code</span>.<span class="target">charAt</span>(<span class="character">i</span>);'
+      javaBG +='\n  <span class="logic">if</span>(<span class="character">nextChar</span> == <span class="primary">"<"</span>) {'
+      javaBG +='\n    <span class="logic">for</span>(<span class="character">i</span>; <span class="character">code</span>.<span class="target">charAt</span>(<span class="character">i</span>) != <span class="primary">">"</span>; <span class="character">i</span>++) {'
+      javaBG +='\n      <span class="character">char</span> += <span class="character">code</span>.<span class="target">charAt</span>(<span class="character">i</span>);'
+      javaBG +='\n    }'
+      javaBG +='\n    <span class="character">char</span> += <span class="primary">">"</span>;'
+      javaBG +='\n  } <span class="logic">else</span> {'
+      javaBG +='\n    <span class="character">char</span> = <span class="character">nextChar</span>;'
+      javaBG +='\n  }'
+      javaBG +='\n  <span class="character">background</span> += <span class="character">char</span>;'
+      javaBG +='\n  <span class="character">target</span>.<span class="character">innerHTML</span> = <span class="character">background</span>+(<span class="character">char</span>==<span class="primary">"</span><span class="value">\\t</span><span class="primary">"</span>||<span class="character">char</span>==<span class="primary">"</span><span class="value">\\n</span><span class="primary">"</span>?<span class="primary">""</span>:<span class="primary">"|"</span>);'
+      javaBG +='\n  <span class="logic">if</span>(<span class="character">i</span> < <span class="character">code</span>.<span class="character">length</span>) {'
+      javaBG +='\n    <span class="target">setTimeout</span>(() <span class="tag">=></span> {'
+      javaBG +='\n      <span class="target">type</span>(<span class="character">code</span>, <span class="character">i</span>+<span class="value">1</span>, <span class="character">background</span>, <span class="character">target</span>, <span class="character">blinker</span>);'
+      javaBG +='\n    }, <span class="value">5</span>);'
+      javaBG +='\n  } <span class="logic">else</span> {'
+      javaBG +='\n    <span class="character">target</span>.<span class="character">innerHTML</span> = <span class="character">background</span>;'
+      javaBG +='\n    <span class="target">blink</span>(<span class="character">document</span>.<span class="target">getElementById</span>(<span class="character">blinker</span>));'
+      javaBG +='\n    <span class="tag">function</span> <span class="target">blink</span>(<span class="character">target</span>) {'
+      javaBG +='\n      <span class="logic">if</span> (<span class="character">target</span>.<span class="character">style</span>.<span class="character">display</span> === <span class="primary">"none"</span>) {'
+      javaBG +='\n        <span class="character">target</span>.<span class="character">style</span>.<span class="character">display</span> = <span class="primary">"inline-block"</span>;'
+      javaBG +='\n      } <span class="logic">else</span> {'
+      javaBG +='\n        <span class="character">target</span>.<span class="character">style</span>.<span class="character">display</span> = <span class="primary">"none"</span>;'
+      javaBG +='\n      }'
+      javaBG +='\n      <span class="target">setTimeout</span>(() <span class="tag">=></span> {'
+      javaBG +='\n        <span class="target">blink</span>(<span class="character">target</span>);'
+      javaBG +='\n      }, <span class="value">500</span>);'
+      javaBG +='\n    }'
+      javaBG +='\n  }'
+      javaBG +='\n}'
+  
+  function type(code, i, background, target, blinker) {
+    var char = "";
+    var nextChar = code.charAt(i);
+    if(nextChar == '<') {
+      for(i; code.charAt(i) != '>'; i++) {
+        char += code.charAt(i);
+      }
+      char += '>';
+    } else {
+      char = nextChar;
+    }
+    background += char;
+    target.innerHTML = background+(char=="\t"||char=="\n"?"":"|");
+    if(i < code.length) {
+      setTimeout(() => {
+        type(code, i+1, background, target, blinker);
+      }, 5);
+    } else {
+      target.innerHTML = background;
+      if(blinker == "HTMLCursor") {
+        blink(document.getElementById(blinker))
+        function blink(target) {
+          if (target.style.display === "none") {
+            target.style.display = "inline-block";
+          } else {
+            target.style.display = "none";
+          }
+          setTimeout(() => {
+            blink(target);
+          }, 500);
+        }
+      }
+    }
+  }
+  
+  type(cssBG, 0, "", document.getElementById("cssBG"), "CSSCursor")
+  type(htmlBG, 0, "", document.getElementById("htmlBG"), "HTMLCursor")
+  type(javaBG, 0, "", document.getElementById("javaBG"), "JavaCursor")
 })
