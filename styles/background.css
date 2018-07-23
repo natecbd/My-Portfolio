@@ -64,3 +64,20 @@ body {
 .tag {
   color: #569cd6;
 }
+
+@media only screen and (max-width: 600px) {
+  #cssBG {
+    visibility: hidden;
+    width: 0%;
+  }
+
+  #htmlBG {
+    visibility: hidden;
+    width: 0%;
+  }
+
+  #javaBG {
+    font-size: 2vw;
+    width: 80%;
+  }
+}
