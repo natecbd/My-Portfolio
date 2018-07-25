@@ -64,6 +64,32 @@
   animation-timing-function: ease-in-out;
 }
 
+#left-bracket {
+  -webkit-animation: bounceLeft .5s infinite alternate;
+          animation: bounceLeft .5s infinite alternate;
+}
+
+#right-bracket {
+  -webkit-animation: bounceRight .5s infinite alternate;
+          animation: bounceRight .5s infinite alternate;
+}
+
+@keyframes bounceRight {
+  from {
+    transform: translateX(0px);
+  } to {
+    transform: translateX(15px);
+  }
+}
+
+@keyframes bounceLeft {
+  from {
+    transform: translateX(0px);
+  } to {
+    transform: translateX(-15px);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #page-text {
     font-size: 5vw;
