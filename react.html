@@ -31,12 +31,11 @@
         <span id="right-nav"></span>
       </div>
     </div>
-    <!-- <div id="reactTest">Test</div> -->
     <script type="text/babel">
 
       var App = React.createClass({
         render: function() {
-          return <a className="bracket-buttons inline left" href="bootstrap.html" id="left-bracket"><span><b>&#123;</b></span></a>
+          return <a className="bracket-buttons inline left" href="bootstrap.html" id="left-bracket"><b>&#123;</b></a>
         }
       });
       ReactDOM.render(<App />,document.getElementById('left-nav'));
@@ -50,14 +49,12 @@
       
       App = React.createClass({
         render: function() {
-          return <a className="bracket-buttons inline right" href="index.html" id="right-bracket"><span><b>&#125;</b></span></a>;
+          return <a className="bracket-buttons inline right" href="index.html" id="right-bracket"><b>&#125;</b></a>;
         }
       });
       ReactDOM.render(<App />, document.getElementById('right-nav'));
 
-     
     </script>
-    
     <script> 
       window.onload = function(){
         var cssBG = '\n\n\t<span class="target">a </span>{'
@@ -202,9 +199,9 @@
           }
           background += char;
 
-          target.innerHTML = background+(char=="\t"||char=="\n"?"":"|");
+          target.innerHTML = background+(char=="\t"||char=="\n"?"":"<span class='cursor'>|</span>");
           if(i < code.length) {
-            setTimeout(() => {
+            setTimeout(function() {
               type(code, i+1, background, target, blinker)
             }, 5);
           } else {
@@ -217,7 +214,7 @@
                 } else {
                   target.style.display = "none";
                 }
-                setTimeout(() => {
+                setTimeout(function() {
                   blink(target);
                 }, 500);
               }
