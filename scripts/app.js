@@ -141,9 +141,9 @@ window.onload = function(){
     }
     background += char;
 
-    target.innerHTML = background+(char=="\t"||char=="\n"?"":"|");
+    target.innerHTML = background+(char=="\t"||char=="\n"?"":"<span class='cursor'>|</span>");
     if(i < code.length) {
-      setTimeout(() => {
+      setTimeout(function() {
         type(code, i+1, background, target, blinker)
       }, 5);
     } else {
@@ -156,7 +156,7 @@ window.onload = function(){
           } else {
             target.style.display = "none";
           }
-          setTimeout(() => {
+          setTimeout(function() {
             blink(target);
           }, 500);
         }
