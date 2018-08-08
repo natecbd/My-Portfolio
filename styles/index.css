@@ -4,7 +4,7 @@
   background-color: #151516;
   color: white;
   position: fixed;
-  z-index: 99;
+  /* z-index: 99; */
 }
 
 .inline {
@@ -22,8 +22,8 @@
 }
 
 .center-screen {
-  position: absolute;
-  margin: 0;
+  /* position: absolute; */
+  /* margin: 0; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -74,6 +74,17 @@
 #right-bracket {
   -webkit-animation: bounceRight .5s infinite alternate;
           animation: bounceRight .5s infinite alternate;
+}
+
+.modal {
+  -webkit-animation-duration: .75s;
+     -moz-animation-duration: .75s;
+       -o-animation-duration: .75s;
+          animation-duration: .75s;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @keyframes bounceRight {
