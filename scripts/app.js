@@ -163,8 +163,33 @@ window.onload = function(){
       }
     }
   }
-  
-  type(cssBG, 0, "", document.getElementById("cssBG"), "CSSCursor")
+
+  type(cssBG,  0, "", document.getElementById("cssBG"),  "CSSCursor")
   type(htmlBG, 0, "", document.getElementById("htmlBG"), "HTMLCursor")
   type(javaBG, 0, "", document.getElementById("javaBG"), "JavaCursor")
+
+  var modal = document.getElementById('myModal');
+
+  document.getElementById("myBtn").onclick = function() {
+    if(modal.style.display != "block") {
+      // alert("if")
+      modal.style.display = "block";
+
+      name = "fade-in";
+      modal.className = modal.className.replace(/\bfade-out\b/g, "");
+      if (modal.className.split(" ").indexOf(name) == -1) {
+        modal.className += " " + name;
+      }
+    } else {
+      modal.style.display = "none";
+      name = "fade-out";
+      modal.className = modal.className.replace(/\bfade-in\b/g, "");
+      if (modal.className.split(" ").indexOf(name) == -1) {
+        modal.className += " " + name;
+      }
+    }
+  }
+  modal.onclick = function(event) {
+    modal.style.display = "none";
+  } 
 }
