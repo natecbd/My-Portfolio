@@ -4,7 +4,7 @@
   background-color: #151516;
   color: white;
   position: fixed;
-  /* z-index: 99; */
+  z-index: 9999;
 }
 
 .inline {
@@ -76,7 +76,7 @@
           animation: bounceRight .5s infinite alternate;
 }
 
-.modal {
+.CSSmodal {
   -webkit-animation-duration: .75s;
      -moz-animation-duration: .75s;
        -o-animation-duration: .75s;

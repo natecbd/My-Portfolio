@@ -1,5 +1,6 @@
-a { 
-  text-decoration: none; 
+a, .CSSmodal-content a, #left-bracket, #right-bracket { 
+  text-decoration: none;
+  color: white; 
 }
 
 .nav-bar {
@@ -23,6 +24,7 @@ a {
   float: right;
   text-align: left;
   vertical-align: middle;
+  cursor: pointer;
   line-height: 350%;
   font-size: 20px;
   height: 70px;

@@ -168,28 +168,35 @@ window.onload = function(){
   type(htmlBG, 0, "", document.getElementById("htmlBG"), "HTMLCursor")
   type(javaBG, 0, "", document.getElementById("javaBG"), "JavaCursor")
 
-  var modal = document.getElementById('myModal');
+  var target1 = document.getElementById('aboutModal');
+  document.getElementById("aboutBtn").onclick = function(){ jsToggle(target1) };
+  target1.onclick = function(event) {
+    target1.style.display = "none";
+  } 
+  
+  var target2 = document.getElementById('contactModal');
+  document.getElementById("contactBtn").onclick = function() { jsToggle(target2) };
+  target2.onclick = function(event) {
+    target2.style.display = "none";
+  } 
 
-  document.getElementById("myBtn").onclick = function() {
-    if(modal.style.display != "block") {
+  function jsToggle(target) {
+    if(target.style.display != "block") {
       // alert("if")
-      modal.style.display = "block";
+      target.style.display = "block";
 
       name = "fade-in";
-      modal.className = modal.className.replace(/\bfade-out\b/g, "");
-      if (modal.className.split(" ").indexOf(name) == -1) {
-        modal.className += " " + name;
+      target.className = target.className.replace(/\bfade-out\b/g, "");
+      if (target.className.split(" ").indexOf(name) == -1) {
+        target.className += " " + name;
       }
     } else {
-      modal.style.display = "none";
+      target.style.display = "none";
       name = "fade-out";
-      modal.className = modal.className.replace(/\bfade-in\b/g, "");
-      if (modal.className.split(" ").indexOf(name) == -1) {
-        modal.className += " " + name;
+      target.className = target.className.replace(/\bfade-in\b/g, "");
+      if (target.className.split(" ").indexOf(name) == -1) {
+        target.className += " " + name;
       }
     }
   }
-  modal.onclick = function(event) {
-    modal.style.display = "none";
-  } 
 }
