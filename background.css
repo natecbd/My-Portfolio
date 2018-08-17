@@ -1,0 +1,166 @@
+body {
+  background-color: #151516;
+  color: white;
+}
+
+#cssBG, #htmlBG, #javaBG, pre {
+  display: inline-block;
+  height: 100%;
+  padding: 9.5px;
+  margin: 0px;
+  margin-top: 60px;
+  font-size: .8vw;
+  line-height: 1.42857143;
+  color: white;
+  overflow: hidden;
+  background-color: #151516;
+  border: 0;
+  border-radius: 0px;
+  word-break: normal;
+  word-wrap: normal;
+  /* opacity: .85; */
+}
+
+#htmlBG {
+  width: 40%;
+}
+
+#cssBG {
+  width: 20%;
+}
+
+#javaBG {
+  width: 30%
+}
+
+.comment {
+  color: #335b1f;
+}
+.target {
+  color: #DCDCAA;
+  /* color: #DCDCAA; */
+}
+
+.primary {
+  color: #d8a089;
+}
+
+.character {
+  /* color: #569cd6; */
+  color: #9CDCFE;
+}
+
+.value {
+  /* color: #4EC9B0; */
+  color: #d5edad;
+}
+
+.control {
+  color: #545454;
+}
+
+.logic {
+  color: #843ca8;
+}
+
+.tag {
+  color: #569cd6;
+}
+
+.cursor {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  #cssBG {
+    visibility: hidden;
+    width: 0%;
+  }
+
+  #htmlBG {
+    visibility: hidden;
+    width: 0%;
+  }
+
+  #javaBG {
+    font-size: 2vw;
+    width: 80%;
+  }
+}
+
+/* The Modal (background) */
+.CSSmodal {
+  color: white;
+  display: none; /* Hidden by default */
+  opacity: 0;
+  z-index: 1; /* Sit on top */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.85);
+}
+
+/* Modal Content/Box */
+.CSSmodal-content {
+  /* top: 50%; */
+  /* left: 50%; */
+  transform: translate(0%, 90%);
+  /* line-height: 50vh; */
+  margin: auto; 
+  text-align: center;
+  vertical-align: middle;
+  width: 100%; 
+  height: 50%;
+}
+
+#abootModal, #cbootModal {
+  color: white;
+  display: none; /* Hidden by default */
+  /* opacity: 0; */
+  z-index: 1; /* Sit on top */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-dialog {
+  width: 100%; /* Full width */
+  top: 35%;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* The Close Button */
+/* .close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}  */

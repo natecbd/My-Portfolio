@@ -246,34 +246,43 @@
         type(javaBG, 0, "", document.getElementById("javaBG"), "JavaCursor")
 
         var target1 = document.getElementById('aboutModal');
-        document.getElementById("aboutBtn").onclick = function(){ jsToggle(target1) };
+        document.getElementById("aboutBtn").onclick = function(){ jsToggle(target1); jsFadeOut(target2) };
         target1.onclick = function(event) {
-          target1.style.display = "none";
+          jsFadeOut(target1);
+          jsFadeOut(target2);
         } 
         
         var target2 = document.getElementById('contactModal');
-        document.getElementById("contactBtn").onclick = function() { jsToggle(target2) };
+        document.getElementById("contactBtn").onclick = function() { jsToggle(target2); jsFadeOut(target1) };
         target2.onclick = function(event) {
-          target2.style.display = "none";
+          jsFadeOut(target1);
+          jsFadeOut(target2);
         } 
 
         function jsToggle(target) {
           if(target.style.display != "block") {
-            // alert("if")
-            target.style.display = "block";
-
-            name = "fade-in";
-            target.className = target.className.replace(/\bfade-out\b/g, "");
-            if (target.className.split(" ").indexOf(name) == -1) {
-              target.className += " " + name;
-            }
+            jsFadeIn(target);
           } else {
-            target.style.display = "none";
-            name = "fade-out";
-            target.className = target.className.replace(/\bfade-in\b/g, "");
-            if (target.className.split(" ").indexOf(name) == -1) {
-              target.className += " " + name;
-            }
+            jsFadeOut(target);
+          }
+        }
+
+        function jsFadeOut(target) {
+          name = "fade-out";
+          target.className = target.className.replace(/\bfade-in\b/g, "");
+          if (target.className.split(" ").indexOf(name) == -1) {
+            target.className += " " + name;
+          }
+          setTimeout(function() {if(target.style.display == "block") {target.style.display = "none";}}, 750)
+        }
+
+        function jsFadeIn(target) {
+          target.style.display = "block";
+
+          name = "fade-in";
+          target.className = target.className.replace(/\bfade-out\b/g, "");
+          if (target.className.split(" ").indexOf(name) == -1) {
+            target.className += " " + name;
           }
         }
       }
