@@ -1,4 +1,4 @@
-window.onload = function(){
+$(function () {
   var cssBG = '\n\n\t<span class="target">a </span>{'
       cssBG +='\n\t  <span class="character">text-decoration</span>: <span class="primary">none</span> ;'
       cssBG +='\n\t}'
@@ -55,8 +55,14 @@ window.onload = function(){
       htmlBG +='\n'
       htmlBG +='\n<span class="control">&lt;</span><span class="tag">html</span><span class="control">&gt;</span>'
       htmlBG +='\n<span class="control">&lt;</span><span class="tag">head</span><span class="control">&gt;</span>'
-      htmlBG +='\n  <span class="control">&lt;</span><span class="tag">title</span><span class="control">&gt;</span>Natecbd<span class="control">&lt;/</span><span class="tag">title</span><span class="control">&gt;</span>'
+      htmlBG +='\n  <span class="control">&lt;</span><span class="tag">title</span><span class="control">&gt;</span>Natecbd<span class="control">&lt;/</span>title<span class="control">&gt;</span>'
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">meta</span> <span class="character">name</span>=<span class="primary">"viewport"</span> <span class="character">content</span>=<span class="primary">"width=device-width, initial-scale=1, user-scalable=no"</span><span class="control">&gt;</span>'
+      htmlBG +='\n  <span class="comment">&lt;!--  Styles  --&gt;</span>'
+      htmlBG +='\n  <span class="control">&lt;</span><span class="tag">link</span> <span class="character">rel</span>=<span class="primary">"stylesheet"</span> <span class="character">href</span>=<span class="primary">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span><span class="control">&gt;</span>'
+      htmlBG +='\n  <span class="comment">&lt;!-- jQuery library --&gt;</span>'
+      htmlBG +='\n  <span class="control">&lt;</span><span class="tag">script</span> <span class="character">src</span>=<span class="primary">"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">script</span><span class="control">&gt;</span>'
+      htmlBG +='\n  <span class="comment">&lt;!-- Latest compiled JavaScript --&gt;</span>'
+      htmlBG +='\n  <span class="control">&lt;</span><span class="tag">script</span> <span class="character">src</span>=<span class="primary">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">script</span><span class="control">&gt;</span>'
       htmlBG +='\n  '
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">link</span> <span class="character">rel</span>=<span class="primary">"stylesheet"</span> <span class="character">type</span>=<span class="primary">"text/css"</span><span class="character"> href</span>=<span class="primary">"styles/nav.css"</span><span class="control">&gt;</span>'
       htmlBG +='\n  <span class="control">&lt;</span><span class="tag">link</span> <span class="character">rel</span>=<span class="primary">"stylesheet"</span> <span class="character">type</span>=<span class="primary">"text/css"</span> <span class="character">href</span>=<span class="primary">"styles/index.css"</span><span class="control">&gt;</span>'
@@ -69,44 +75,35 @@ window.onload = function(){
       htmlBG +='\n    <span class="control">&lt;</span><span class="tag">pre</span> <span class="character">id</span>=<span class="primary">"cssBG"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">pre</span><span class="control">&gt;</span>'
       htmlBG +='\n    <span class="control">&lt;</span><span class="tag">pre</span> <span class="character">id</span>=<span class="primary">"htmlBG"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">pre</span><span class="control">&gt;</span>'
       htmlBG +='\n    <span class="control">&lt;</span><span class="tag">pre</span> <span class="character">id</span>=<span class="primary">"jsBG"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">pre</span><span class="control">&gt;</span>'
-      htmlBG +='\n      <span class="control">&lt;</span><span class="tag">nav</span> <span class="character">class</span>=<span class="primary">"nav-bar"</span><span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">li</span> <span class="character">class</span>=<span class="primary">"nav-item hvr-underline-reveal"</span><span class="control">&gt;</span>'
-      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">div</span> <span class="character">id</span>=<span class="primary">"contactBtn"</span><span class="control">&gt;</span>'
-      htmlBG +='\n            <span class="control">&lt;</span><span class="tag">span</span> <span class="character">class</span>=<span class="primary">"nav-link navc fade-in-up"</span><span class="control">&gt;</span>Contact<span class="control">&lt;/</span><span class="tag">span</span><span class="control">&gt;</span>'
-      htmlBG +='\n          <span class="control">&lt;/</span><span class="tag">div</span><span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">li</span><span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">li</span> <span class="character">class</span>=<span class="primary">"nav-item hvr-underline-reveal"</span><span class="control">&gt;</span>'
-      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">div</span> <span class="character">id</span>=<span class="primary">"aboutBtn"</span><span class="control">&gt;</span>'
-      htmlBG +='\n            <span class="control">&lt;</span><span class="tag">span</span> <span class="character">class</span>=<span class="primary">"nav-link navb fade-in-up"</span><span class="control">&gt;</span>About<span class="control">&lt;/</span><span class="tag">span</span><span class="control">&gt;</span>'
-      htmlBG +='\n          <span class="control">&lt;/</span><span class="tag">div</span><span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">li</span><span class="control">&gt;</span>'
-      htmlBG +='\n      <span class="control">&lt;/</span><span class="tag">nav</span><span class="control">&gt;</span>'
-      htmlBG +='\n      <span class="control">&lt;</span><span class="tag">div</span> <span class="character">id</span>=<span class="primary">"contactModal"</span> <span class="character">class</span>=<span class="primary">"CSSmodal"</span><span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">h3</span> <span class="character">class</span>=<span class="primary">"CSSmodal-content"</span><span class="control">&gt;</span>'
-      htmlBG +='\n          e-mail: <span class="control">&lt;</span><span class="tag">a</span> <span class="character">href</span>=<span class="primary">"mailto:natecbd@gmail.com"</span><span class="control">&gt;</span>natecbd@gmail.com<span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span> / github: <span class="control">&lt;</span><span class="tag">a</span> <span class="character">href</span>=<span class="primary">"http://www.github.com/natecbd"</span><span class="control">&gt;</span>natecbd<span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span> / twitter: <span class="control">&lt;</span><span class="tag">a</span> <span class="character">href</span>=<span class="primary">"http://www.twitter.com/natecbd"</span><span class="control">&gt;</span>natecbd<span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
+      htmlBG +='\n    <span class="control">&lt;</span><span class="tag">nav</span> <span class="character">class</span>=<span class="primary">"nav-bar"</span><span class="control">&gt;</span>'
+      htmlBG +='\n      <span class="control">&lt;</span><span class="tag">li</span> <span class="character">class</span>=<span class="primary">"nav-item hvr-underline-reveal"</span><span class="control">&gt;'
+      htmlBG +='\n        </span><span class="control">&lt;</span><span class="tag">a</span> <span class="character">class</span>=<span class="primary">"nav-link navc fade-in-up"</span> <span class="character">href</span>=<span class="primary">"contact"</span><span class="control">&gt;</span>Contact<span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
+      htmlBG +='\n      <span class="control">&lt;/</span><span class="tag">li</span><span class="control">&gt;</span>'
+      htmlBG +='\n      <span class="control">&lt;</span><span class="tag">li</span> <span class="character">class</span>=<span class="primary">"nav-item hvr-underline-reveal"</span><span class="control">&gt;'
+      htmlBG +='\n        </span><span class="control">&lt;</span><span class="tag">a</span> <span class="character">class</span>=<span class="primary">"nav-link navb fade-in-up"</span> <span class="character">href</span>=<span class="primary">"about"</span><span class="control">&gt;</span>About<span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
+      htmlBG +='\n      <span class="control">&lt;/</span><span class="tag">li</span><span class="control">&gt;</span>'
+      htmlBG +='\n    <span class="control">&lt;/</span><span class="tag">nav</span><span class="control">&gt;</span>'
+      htmlBG +='\n    <span class="control">&lt;</span><span class="tag">div</span> <span class="character">id</span>=<span class="primary">"page-build-panel"</span> <span class="character">class</span>=<span class="primary">""</span><span class="control">&gt;</span>'
+      htmlBG +='\n      <span class="control">&lt;</span><span class="tag">div</span> <span class="character">id</span>=<span class="primary">"page-build"</span> <span class="character">class</span>=<span class="primary">"row"</span><span class="control">&gt;</span>'
+      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">a</span> <span class="character">class</span>=<span class="primary">"col-sm-1" </span><span class="character">href</span>=<span class="primary">"index.html"</span><span class="control">&gt;</span>'
+      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">h3</span><span class="control">&gt;</span>'
+      htmlBG +='\n            <span class="control">&lt;</span><span class="tag">span</span> <span class="character">class</span>=<span class="primary">"glyphicon glyphicon-triangle-left"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">span</span><span class="control">&gt;</span>'
+      htmlBG +='\n          <span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
+      htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
+      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">h3</span> <span class="character">class</span>=<span class="primary">"col-sm-10"</span><span class="control">&gt;</span>'
+      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">b</span><span class="control">&gt;</span>This page is built with <span class="tag">&amp;lt;</span>/html<span class="tag">&amp;gt;</span>, CSS, Javascript, <span class="tag">&amp;amp;</span> Bootstrap.<span class="control">&lt;/</span><span class="tag">b</span><span class="control">&gt;</span>'
       htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
-      htmlBG +='\n      <span class="control">&lt;/</span><span class="tag">div</span><span class="control">&gt;</span>'
-      htmlBG +='\n      <span class="control">&lt;</span><span class="tag">div</span> <span class="character">id</span>=<span class="primary">"aboutModal"</span> <span class="character">class</span>=<span class="primary">"CSSmodal"</span><span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">h3</span> <span class="character">class</span>=<span class="primary">"CSSmodal-content"</span><span class="control">&gt;</span>'
-      htmlBG +='\n          Name: Nathan Goodman / Occupation: Web Developer / Location: Seattle, WA'
-      htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
-      htmlBG +='\n      <span class="control">&lt;/</span><span class="tag">div</span><span class="control">&gt;</span>'
-      htmlBG +='\n      <span class="control">&lt;</span><span class="tag">div</span> <span class="character">id</span>=<span class="primary">"page-build-panel"</span> <span class="character">class</span>=<span class="primary">"center-screen"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">div</span><span class="control">&gt;</span>'
-      htmlBG +='\n      <span class="control">&lt;</span><span class="tag">div</span> <span class="character">id</span>=<span class="primary">"page-build"</span> <span class="character">class</span>=<span class="primary">"center-screen"</span><span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">a</span> <span class="character">class</span>=<span class="primary">"bracket-buttons inline left"</span> <span class="character">href</span>=<span class="primary">"react.html"</span> <span class="character">id</span>=<span class="primary">"left-bracket"</span><span class="control">&gt;</span><span class="control">&lt;</span><span class="tag">b</span><span class="control">&gt;</span>{<span class="control">&lt;/</span><span class="tag">b</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">div</span> <span class="character">class</span>=<span class="primary">"inline middle"</span> <span class="character">id</span>=<span class="primary">"page-text"</span><span class="control">&gt;</span>Webpage built with &amp;lt;/html&amp;gt;, CSS, &amp; JavaScript.<span class="control">&lt;/</span>div<span class="control">&gt;</span>'
-      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">a</span> <span class="character">class</span>=<span class="primary">"bracket-buttons inline right"</span> <span class="character">href</span>=<span class="primary">"bootstrap.html"</span> <span class="character">id</span>=<span class="primary">"right-bracket"</span><span class="control">&gt;</span><span class="control">&lt;</span><span class="tag">b</span><span class="control">&gt;</span>}<span class="control">&lt;/</span><span class="tag">b</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
+      htmlBG +='\n        <span class="control">&lt;</span><span class="tag">a</span> <span class="character">class</span>=<span class="primary">"col-sm-1" </span><span class="character">href</span>=<span class="primary">"index.html"</span><span class="control">&gt;</span>'
+      htmlBG +='\n          <span class="control">&lt;</span><span class="tag">h3</span><span class="control">&gt;</span>'
+      htmlBG +='\n            <span class="control">&lt;</span><span class="tag">span</span> <span class="character">class</span>=<span class="primary">"glyphicon glyphicon-triangle-right"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">span</span><span class="control">&gt;</span>'
+      htmlBG +='\n          <span class="control">&lt;/</span><span class="tag">h3</span><span class="control">&gt;</span>'
+      htmlBG +='\n        <span class="control">&lt;/</span><span class="tag">a</span><span class="control">&gt;</span>'
       htmlBG +='\n      <span class="control">&lt;/</span><span class="tag">div</span><span class="control">&gt;</span>'
       htmlBG +='\n    <span class="control">&lt;/</span><span class="tag">div</span><span class="control">&gt;</span>'
       htmlBG +='\n  <span class="control">&lt;/</span><span class="tag">div</span><span class="control">&gt;</span>'
-      htmlBG +='\n  <span class="control">&lt;</span><span class="tag">script</span> <span class="character">src</span>=<span class="primary">"scripts/bootstrap.js"</span><span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">script</span><span class="control">&gt;</span>'
+      htmlBG +='\n  <span class="control">&lt;</span><span class="tag">script</span> <span class="character">src</span>=<span class="primary">"scripts/bootstrap.js"<span class="control">&gt;</span><span class="control">&lt;/</span><span class="tag">script</span><span class="control">&gt;</span>'
       htmlBG +='\n<span class="control">&lt;/</span><span class="tag">body</span><span class="control">&gt;</span>'
-      htmlBG +='\n<span class="control">&lt;/</span><span class="tag">html</span><span class="control">&gt;</span><span id="HTMLCursor">|</span>'
-
-
-
- 
-
+      htmlBG +='\n<span class="control">&lt;/</span><span class="tag">html</span><span class="control">&gt;</span></span><span id="HTMLCursor">|</span>'
 
   var javaBG = '\n\n<span class="tag">function</span> <span class="target">type</span>(<span class="character">code</span>, <span class="character">i</span>, <span class="character">background</span>, <span class="character">target</span>, <span class="character">blinker</span>) {'
       javaBG +='\n  <span class="tag">var</span> <span class="character">char</span> = <span class="primary">""</span>;'
@@ -143,24 +140,23 @@ window.onload = function(){
   
   function type(code, i, background, target, blinker) {
     var char = "";
-    var nextChar = code.charAt(i)
+    var nextChar = code.charAt(i);
     if(nextChar == '<') {
       for(i; code.charAt(i) != '>'; i++) {
-        char += code.charAt(i)
+        char += code.charAt(i);
       }
       char += '>';
     } else {
       char = nextChar;
     }
     background += char;
-
     target.innerHTML = background+(char=="\t"||char=="\n"?"":"<span class='cursor'>|</span>");
     if(i < code.length) {
       setTimeout(function() {
-        type(code, i+1, background, target, blinker)
+        type(code, i+1, background, target, blinker);
       }, 5);
     } else {
-      target.innerHTML = background
+      target.innerHTML = background;
       if(blinker == "HTMLCursor") {
         blink(document.getElementById(blinker))
         function blink(target) {
@@ -176,52 +172,8 @@ window.onload = function(){
       }
     }
   }
-
-  type(cssBG,  0, "", document.getElementById("cssBG"),  "CSSCursor")
+  
+  type(cssBG, 0, "", document.getElementById("cssBG"), "CSSCursor")
   type(htmlBG, 0, "", document.getElementById("htmlBG"), "HTMLCursor")
   type(javaBG, 0, "", document.getElementById("javaBG"), "JavaCursor")
-
-
-  // var fading = false;
-  
-  var target1 = document.getElementById('aboutModal');
-  document.getElementById("aboutBtn").onclick = function(){ jsToggle(target1); jsFadeOut(target2) };
-  target1.onclick = function(event) {
-    jsFadeOut(target1);
-    jsFadeOut(target2);
-  } 
-  
-  var target2 = document.getElementById('contactModal');
-  document.getElementById("contactBtn").onclick = function() { jsToggle(target2); jsFadeOut(target1) };
-  target2.onclick = function(event) {
-    jsFadeOut(target1);
-    jsFadeOut(target2);
-  } 
-
-  function jsToggle(target) {
-    if(target.style.display != "block") {
-      jsFadeIn(target);
-    } else {
-      jsFadeOut(target);
-    }
-  }
-
-  function jsFadeOut(target) {
-    name = "fade-out";
-    target.className = target.className.replace(/\bfade-in\b/g, "");
-    if (target.className.split(" ").indexOf(name) == -1) {
-      target.className += " " + name;
-    }
-    setTimeout(function() {if(target.style.display == "block") {target.style.display = "none";}}, 750)
-  }
-
-  function jsFadeIn(target) {
-    target.style.display = "block";
-
-    name = "fade-in";
-    target.className = target.className.replace(/\bfade-out\b/g, "");
-    if (target.className.split(" ").indexOf(name) == -1) {
-      target.className += " " + name;
-    }
-  }
-}
+})
