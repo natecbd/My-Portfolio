@@ -168,35 +168,48 @@ window.onload = function(){
   type(htmlBG, 0, "", document.getElementById("htmlBG"), "HTMLCursor")
   type(javaBG, 0, "", document.getElementById("javaBG"), "JavaCursor")
 
-  var target1 = document.getElementById('aboutModal');
-  document.getElementById("aboutBtn").onclick = function(){ jsToggle(target1) };
-  target1.onclick = function(event) {
-    target1.style.display = "none";
-  } 
+  var abt = {};
+  var cnc = {};
   
-  var target2 = document.getElementById('contactModal');
-  document.getElementById("contactBtn").onclick = function() { jsToggle(target2) };
-  target2.onclick = function(event) {
-    target2.style.display = "none";
-  } 
+  abt.btn = document.getElementById("aboutBtn");
+  cnc.btn = document.getElementById("contactBtn");
+  abt.modal = document.getElementById('aboutModal');
+  cnc.modal = document.getElementById('contactModal');
 
-  function jsToggle(target) {
-    if(target.style.display != "block") {
-      // alert("if")
-      target.style.display = "block";
+  abt.modal.onclick = function() {fadeAll(abt, cnc)};
+  cnc.modal.onclick = function() {fadeAll(abt, cnc)};
 
-      name = "fade-in";
-      target.className = target.className.replace(/\bfade-out\b/g, "");
-      if (target.className.split(" ").indexOf(name) == -1) {
-        target.className += " " + name;
-      }
-    } else {
-      target.style.display = "none";
-      name = "fade-out";
-      target.className = target.className.replace(/\bfade-in\b/g, "");
-      if (target.className.split(" ").indexOf(name) == -1) {
-        target.className += " " + name;
-      }
-    }
-  }
-}
+  resetBtn(abt, cnc);
+  
+  function resetBtn(a, b) {
+    a.btn.onclick = function() {fadeOne(a, b)};
+    b.btn.onclick = function() {fadeOne(b, a)};
+  };
+
+  function fadeAll(a, b) {
+    jsFadeOut(a);
+    jsFadeOut(b);
+    resetBtn(a, b);
+  };
+
+  function fadeOne (a, b) {
+    jsFadeIn(a); 
+    jsFadeOut(b);
+    a.btn.onclick = function() {fadeAll(a, b)};
+    b.btn.onclick = function() {fadeOne(b, a)};
+  };
+
+  function jsFadeOut(targ) {
+    if (targ.modal.className.split(" ").indexOf("fade-in") != -1) {
+      targ.modal.className += " " + "fade-out";
+    };
+    targ.modal.className = targ.modal.className.replace(/\bfade-in\b/g, "");
+  };
+
+  function jsFadeIn(targ) {
+    targ.modal.className = targ.modal.className.replace(/\bfade-out\b/g, "");
+    if (targ.modal.className.split(" ").indexOf("fade-in") == -1) {
+      targ.modal.className += " " + "fade-in";
+    };
+  };
+};
