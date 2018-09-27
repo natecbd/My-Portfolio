@@ -249,50 +249,55 @@
           }
         }
       
-        type(cssBG, 0, "", document.getElementById("cssBG"), "CSSCursor")
+        type(cssBG,  0, "", document.getElementById("cssBG"),  "CSSCursor")
         type(htmlBG, 0, "", document.getElementById("htmlBG"), "HTMLCursor")
         type(javaBG, 0, "", document.getElementById("javaBG"), "JavaCursor")
 
-        var target1 = document.getElementById('aboutModal');
-        document.getElementById("aboutBtn").onclick = function(){ jsToggle(target1); jsFadeOut(target2) };
-        target1.onclick = function(event) {
-          jsFadeOut(target1);
-          jsFadeOut(target2);
-        } 
+        //nav buttons
+        var abt = {};
+        var cnc = {};
         
-        var target2 = document.getElementById('contactModal');
-        document.getElementById("contactBtn").onclick = function() { jsToggle(target2); jsFadeOut(target1) };
-        target2.onclick = function(event) {
-          jsFadeOut(target1);
-          jsFadeOut(target2);
-        } 
+        abt.btn = document.getElementById("aboutBtn");
+        cnc.btn = document.getElementById("contactBtn");
+        abt.modal = document.getElementById("aboutModal");
+        cnc.modal = document.getElementById("contactModal");
 
-        function jsToggle(target) {
-          if(target.style.display != "block") {
-            jsFadeIn(target);
-          } else {
-            jsFadeOut(target);
-          }
-        }
+        abt.modal.onclick = function() {fadeAll(abt, cnc)};
+        cnc.modal.onclick = function() {fadeAll(abt, cnc)};
 
-        function jsFadeOut(target) {
-          name = "fade-out";
-          target.className = target.className.replace(/\bfade-in\b/g, "");
-          if (target.className.split(" ").indexOf(name) == -1) {
-            target.className += " " + name;
-          }
-          setTimeout(function() {if(target.style.display == "block") {target.style.display = "none";}}, 750)
-        }
+        resetBtn(abt, cnc);
+        
+        function resetBtn(a, b) {
+          a.btn.onclick = function() {fadeOne(a, b)};
+          b.btn.onclick = function() {fadeOne(b, a)};
+        };
 
-        function jsFadeIn(target) {
-          target.style.display = "block";
+        function fadeAll(a, b) {
+          jsFadeOut(a);
+          jsFadeOut(b);
+          resetBtn(a, b);
+        };
 
-          name = "fade-in";
-          target.className = target.className.replace(/\bfade-out\b/g, "");
-          if (target.className.split(" ").indexOf(name) == -1) {
-            target.className += " " + name;
-          }
-        }
+        function fadeOne(a, b) {
+          jsFadeIn(a); 
+          jsFadeOut(b);
+          a.btn.onclick = function() {fadeAll(a, b)};
+          b.btn.onclick = function() {fadeOne(b, a)};
+        };
+
+        function jsFadeOut(targ) {
+          if (targ.modal.className.split(" ").indexOf("fade-in") != -1) {
+            targ.modal.className += " " + "fade-out";
+          };
+          targ.modal.className = targ.modal.className.replace(/\bfade-in\b/g, "");
+        };
+
+        function jsFadeIn(targ) {
+          targ.modal.className = targ.modal.className.replace(/\bfade-out\b/g, "");
+          if (targ.modal.className.split(" ").indexOf("fade-in") == -1) {
+            targ.modal.className += " " + "fade-in";
+          };
+        };
       }
     </script>
   </body>
