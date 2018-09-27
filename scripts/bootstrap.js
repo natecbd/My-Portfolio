@@ -176,4 +176,16 @@ $(function () {
   type(cssBG, 0, "", document.getElementById("cssBG"), "CSSCursor")
   type(htmlBG, 0, "", document.getElementById("htmlBG"), "HTMLCursor")
   type(javaBG, 0, "", document.getElementById("javaBG"), "JavaCursor")
+
+  var cbootModal = $("#cbootModal");
+  var abootModal = $("#abootModal");
+  var cbootBtn = $("#cbootBtn");
+  var abootBtn = $("#abootBtn");
+
+  cbootBtn.on('click', function() {
+    abootModal.modal('hide');
+  })
+  abootBtn.on('click', function() {
+    cbootModal.modal('hide');
+  })
 })
