@@ -87,6 +87,37 @@
           animation-fill-mode: forwards;
 }
 
+#cssBG, #javaBG, #htmlBG {
+  -webkit-animation: blrPre 4.5s;
+          animation: blrPre 4.5s;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@keyframes blrPre {
+  0% {
+    -webkit-filter: blur(0px);
+       -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+         -o-filter: blur(0px);
+            filter: blur(0px);  
+  } 33% {
+    -webkit-filter: blur(0px);
+       -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+         -o-filter: blur(0px);
+            filter: blur(0px);
+  } 100% {
+    -webkit-filter: blur(2px);
+       -moz-filter: blur(2px);
+        -ms-filter: blur(2px);
+         -o-filter: blur(2px);
+            filter: blur(2px);
+  }
+}
+
 @keyframes bounceRight {
   from {
     transform: translateX(0px);
