@@ -37,101 +37,6 @@ window.onload = function(){
     return result;
   };
 
-  var htmlString  = ''
-  +'\n<!DOCTYPE html>'
-  + '\n'
-  + '\n'
-  + '\n<html>'
-  + '\n  <head>'
-  + '\n    <title>Natecbd</title>'
-  + '\n    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">'
-  + '\n'
-  + '\n    <link rel="stylesheet" type="text/css" href="styles/index.css">'
-  + '\n    <link rel="stylesheet" type="text/css" href="styles/nav.css">'
-  + '\n    <link rel="stylesheet" type="text/css" href="styles/background.css">'
-  + '\n    <link rel="stylesheet" type="text/css" href="styles/normalize.css">'
-  + '\n  </head>'
-  + '\n  <body>'
-  + '\n    <div class="bg">'
-  + '\n      <div id="preBlock">'
-  + '\n        <pre class="inline" id="cssBG"></pre>'
-  + '\n        <pre class="inline" id="javaBG"></pre>'
-  + '\n        <pre class="inline" id="htmlBG"></pre>'
-  + '\n      </div>'
-  + '\n      <nav class="nav-bar">'
-  + '\n        <li class="nav-item hvr-underline-reveal">'
-  + '\n          <div id="contactBtn">'
-  + '\n            <span class="nav-link navc fade-in-up">Contact</span>'
-  + '\n          </div>'
-  + '\n        </li>'
-  + '\n        <li class="nav-item hvr-underline-reveal">'
-  + '\n          <div id="aboutBtn">'
-  + '\n            <span class="nav-link navb fade-in-up">About</span>'
-  + '\n          </div>'
-  + '\n        </li>'
-  + '\n      </nav>'
-  + '\n'
-  + '\n      <div id="contactModal" class="CSSmodal">'
-  + '\n        <h3 class="CSSmodal-content">'
-  + '\n          e-mail: <a href="mailto:natecbd@gmail.com">natecbd@gmail.com</a> / github: <a href="http://www.github.com/natecbd">natecbd</a> / twitter: <a href="http://www.twitter.com/natecbd">natecbd</a>'
-  + '\n        </h3>'
-  + '\n      </div>'
-  + '\n'
-  + '\n      <div id="aboutModal" class="CSSmodal">'
-  + '\n        <h3 class="CSSmodal-content">'
-  + '\n          Name: Nathan Goodman / Occupation: Web Developer / Location: Seattle, WA '
-  + '\n        </h3>'
-  + '\n      </div>'
-  + '\n'
-  + '\n      <div id="page-build-panel" class="center-screen"></div>'
-  + '\n    </div>'
-  + '\n    <script src="scripts/app.js"></script>'
-  + '\n  </body>'
-  + '\n</html>'
-  
-  var jsString = ''
-  +'\nfunction type(j,preTag,text,vars,cursor,colorFunction) {'
-  +'\n  vars = colorFunction(j, preTag, text, vars);'
-  +'\n  var bc = byId(cursor)'
-  +'\n  if(bc != null) {'
-  +'\n    bc.remove();'
-  +'\n  }'
-  +'\n  if(j < text.length) {'
-  +'\n    preTag.innerHTML += buildSet(text.charAt(j), vars.control) '
-  +'\n      + "<span id='+'"+cursor+"'+ 'class='+"'cursor'"+'>|</span>"'
-  +'\n    setTimeout(function() {'
-  +'\n      type(j+1,preTag,text,vars,cursor,colorFunction);'
-  +'\n    }, 10)'
-  +'\n  };'
-  +'\n}'
-  +'\n'
-  +'\ntype('
-  +'\n  0,'
-  +'\n  byId("htmlBG"),'
-  +'\n  htmlString,'
-  +'\n  {control:buildControl,inTag:false,inPrimary:false},'
-  +'\n  "htmlCursor",'
-  +'\n  logicHTML'
-  +'\n);'
-  +'\ntype('
-  +'\n  0,'
-  +'\n  byId("cssBG"),'
-  +'\n  cssString,'
-  +'\n  {control:buildTarget,isInt:false,inVal:false,inBlock:false},'
-  +'\n  "cssCursor",'
-  +'\n  logicCSS'
-  +'\n);'
-  +'\n'
-  +'\ntype('
-  +'\n  0,'
-  +'\n  byId("javaBG"),'
-  +'\n  jsString,'
-  +'\n  {control:buildTag},'
-  +'\n  "javaCursor",'
-  +'\n  logicJava'
-  +'\n);'
-
-
   var cssString = ''
   +'\n    #cssBG, #htmlBG, #javaBG, pre {'
   +'\n      display: inline-block;'
@@ -186,7 +91,108 @@ window.onload = function(){
   +'\n      color: white;'
   +'\n    }'
   
-  function logicCSS (j, g, s, o) {
+  var jsString = ''
+  +'\nfunction type(j,preTag,text,vars,cursor,colorFunction) {'
+  +'\n  vars = colorFunction(j, preTag, text, vars);'
+  +'\n  var bc = byId(cursor)'
+  +'\n  if(bc != null) {'
+  +'\n    bc.remove();'
+  +'\n  }'
+  +'\n  if(j < text.length) {'
+  +'\n    preTag.innerHTML += buildSet(text.charAt(j), vars.control) '
+  +'\n      + "<span id='+'"+cursor+"'+ 'class='+"'cursor'"+'>|</span>"'
+  +'\n    setTimeout(function() {'
+  +'\n      type(j+1,preTag,text,vars,cursor,colorFunction);'
+  +'\n    }, 10)'
+  +'\n  };'
+  +'\n}'
+  +'\n'
+  +'\ntype('
+  +'\n  0,'
+  +'\n  byId("htmlBG"),'
+  +'\n  htmlString,'
+  +'\n  {control:buildControl,inTag:false,inPrimary:false},'
+  +'\n  "htmlCursor",'
+  +'\n  colorHTML'
+  +'\n);'
+  +'\ntype('
+  +'\n  0,'
+  +'\n  byId("cssBG"),'
+  +'\n  cssString,'
+  +'\n  {control:buildTarget,isInt:false,inVal:false,inBlock:false},'
+  +'\n  "cssCursor",'
+  +'\n  colorCSS'
+  +'\n);'
+  +'\n'
+  +'\ntype('
+  +'\n  0,'
+  +'\n  byId("javaBG"),'
+  +'\n  jsString,'
+  +'\n  {control:buildTag},'
+  +'\n  "javaCursor",'
+  +'\n  colorJS'
+  +'\n);'
+
+  var htmlString  = ''
+  +'\n  <!DOCTYPE html>'
+  +'\n'
+  +'\n'
+  +'\n  <html>'
+  +'\n    <head>'
+  +'\n      <title>Natecbd</title>'
+  +'\n      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">'
+  +'\n  '
+  +'\n      <link rel="stylesheet" type="text/css" href="styles/index.css">'
+  +'\n      <link rel="stylesheet" type="text/css" href="styles/normalize.css">'
+  +'\n    </head>'
+  +'\n    <body>'
+  +'\n      <div class="bg">'
+  +'\n        <div id="preBlock">'
+  +'\n          <pre class="inline" id="cssBG"></pre>'
+  +'\n          <pre class="inline" id="javaBG"></pre>'
+  +'\n          <pre class="inline" id="htmlBG"></pre>'
+  +'\n        </div>'
+  +'\n        <nav class="nav-bar">'
+  +'\n          <li class="nav-item hvr-underline-reveal">'
+  +'\n            <div id="contactBtn">'
+  +'\n              <span class="nav-link navc fade-in-up">Contact</span>'
+  +'\n            </div>'
+  +'\n          </li>'
+  +'\n          <li class="nav-item hvr-underline-reveal">'
+  +'\n            <div id="aboutBtn">'
+  +'\n              <span class="nav-link navb fade-in-up">About</span>'
+  +'\n            </div>'
+  +'\n          </li>'
+  +'\n        </nav>'
+  +'\n  '
+  +'\n        <div id="contactModal" class="CSSmodal">'
+  +'\n          <h3 class="CSSmodal-content">'
+  +'\n            e-mail: <a href="mailto:natecbd@gmail.com">natecbd@gmail.com</a> / github: <a href="http://www.github.com/natecbd">natecbd</a> / twitter: <a href="http://www.twitter.com/natecbd">natecbd</a>'
+  +'\n          </h3>'
+  +'\n        </div>'
+  +'\n  '
+  +'\n        <div id="aboutModal" class="CSSmodal">'
+  +'\n          <h3 class="CSSmodal-content">'
+  +'\n            Name: Nathan Goodman / Occupation: Web Developer / Location: Seattle, WA '
+  +'\n            <!-- <br><br> -->'
+  +'\n            <!-- Hashtags: #AdobeColdFusion, #AJAX, #Bootstrap, #CSS3, #Git, #HTML, #Java, #JavaScript, #JQuery, #MySQL -->'
+  +'\n          </h3>'
+  +'\n        </div>'
+  +'\n  '
+  +'\n        <div id="page-build-panel" class="center-screen"></div>'
+  +'\n        <div id="page-build" class="center-screen">'
+  +'\n          <a class="bracket-buttons inline left" href="react.html" id="left-bracket"><b>{</b></a>'
+  +'\n          <div class="inline middle" id="page-text">Webpage built with &lt;/html&gt;, CSS, &amp; JavaScript.</div>'
+  +'\n          <a class="bracket-buttons inline right" href="bootstrap.html" id="right-bracket"><b>}</b></a>'
+  +'\n        </div>'
+  +'\n      </div>'
+  +'\n      <script src="scripts/app.js"></script>'
+  +'\n    </body>'
+  +'\n  </html>'
+   
+  
+  
+  function colorCSS (j, s, o) {
     switch (s.charAt(j)) {
       case "{":
         o.inBlock = true;
@@ -233,7 +239,7 @@ window.onload = function(){
     return o;
   }
 
-  function logicJava(j, g, s, o) {
+  function colorJS(j, s, o) {
     var word = ""
     var char = s.charAt(j);
     var breakTest = [" ", ",", "(", ")", "{", "}", ";", ":", "=", "!", "+", "-", "?", ".", "*"];
@@ -333,7 +339,7 @@ window.onload = function(){
     return o;
   }
 
-  function logicHTML (j, g, s, o) {
+  function colorHTML (j, s, o) {
     switch (s.charAt(j)) {
       case "<":
         o.inTag = true;
@@ -396,7 +402,7 @@ window.onload = function(){
   }
 
   function type(j,preTag,text,vars,cursor,colorFunction) {
-    vars = colorFunction(j, preTag, text, vars);
+    vars = colorFunction(j, text, vars);
     var bc = byId(cursor)
     if(bc != null) {
       bc.remove();
@@ -416,7 +422,7 @@ window.onload = function(){
     htmlString,
     {control:buildControl,inTag:false,inPrimary:false},
     "htmlCursor",
-    logicHTML
+    colorHTML
   );
   type(
     0,
@@ -424,7 +430,7 @@ window.onload = function(){
     cssString,
     {control:buildTarget,isInt:false,inVal:false,inBlock:false},
     "cssCursor",
-    logicCSS
+    colorCSS
   );
 
   type(
@@ -433,7 +439,7 @@ window.onload = function(){
     jsString,
     {control:buildTag},
     "javaCursor",
-    logicJava
+    colorJS
   );
 
   //nav buttons
