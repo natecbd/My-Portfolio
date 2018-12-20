@@ -4,6 +4,17 @@ a, .CSSmodal-content a, #left-bracket, #right-bracket {
   /* display: block; */
 }
 
+.CSSmodal {
+  -webkit-animation-duration: .75s;
+     -moz-animation-duration: .75s;
+       -o-animation-duration: .75s;
+          animation-duration: .75s;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .nav-bar {
   position: fixed;
   z-index: 999;

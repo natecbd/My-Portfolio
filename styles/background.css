@@ -9,7 +9,7 @@ body {
   padding: 9.5px;
   margin: 0px;
   margin-top: 60px;
-  font-size: .8vw;
+  font-size: 0.8vw;
   line-height: 1.42857143;
   color: white;
   overflow: hidden;
@@ -38,33 +38,25 @@ body {
 }
 .target {
   color: #DCDCAA;
-  /* color: #DCDCAA; */
 }
-
 .primary {
   color: #d8a089;
 }
-
 .character {
   color: #9CDCFE;
 }
-
 .value {
   color: #d5edad;
 }
-
 .control {
   color: #545454;
 }
-
 .logic {
-  color: #843ca8;
+  color: #c392db;
 }
-
 .tag {
   color: #569cd6;
 }
-
 .cursor {
   color: white;
 }

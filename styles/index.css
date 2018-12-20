@@ -11,19 +11,7 @@
   float: left;
 }
 
-.left, .right {
-  width: 10%;
-  border-radius: 10px;
-  color: black;
-}
-
-.middle {
-  width: 80%;
-}
-
 .center-screen {
-  /* position: absolute; */
-  /* margin: 0; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,63 +21,15 @@
 }
 
 #page-build-panel {
-  opacity: .45;
+  opacity: .25;
   background-color: grey;
   width: 100%;
   height: 100%;
 }
 
-#page-build {
-  opacity: 1;
-  width: 80%;
-}
-
-#page-text, .bracket-buttons {
-  font-size: 2.5vw;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-#page-build a {
-  color: white;
-}
-
-/* Loading Spinner */
-.animated {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
-
-#left-bracket {
-  -webkit-animation: bounceLeft .5s infinite alternate;
-          animation: bounceLeft .5s infinite alternate;
-}
-
-#right-bracket {
-  -webkit-animation: bounceRight .5s infinite alternate;
-          animation: bounceRight .5s infinite alternate;
-}
-
-.CSSmodal {
-  -webkit-animation-duration: .75s;
-     -moz-animation-duration: .75s;
-       -o-animation-duration: .75s;
-          animation-duration: .75s;
-  -webkit-animation-fill-mode: forwards;
-     -moz-animation-fill-mode: forwards;
-       -o-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 #cssBG, #javaBG, #htmlBG {
-  -webkit-animation: blrPre 4.5s;
-          animation: blrPre 4.5s;
+  -webkit-animation: blrPre 5s;
+          animation: blrPre 5s;
   -webkit-animation-fill-mode: forwards;
      -moz-animation-fill-mode: forwards;
        -o-animation-fill-mode: forwards;
@@ -118,6 +58,45 @@
   }
 }
 
+
+
+.left, .right {
+  width: 10%;
+  border-radius: 10px;
+  color: black;
+}
+
+.middle {
+  width: 80%;
+}
+
+#page-text, .bracket-buttons {
+  font-size: 2.5vw;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#page-build {
+  opacity: 1;
+  width: 80%;
+}
+
+#page-build a {
+  color: white;
+}
+
+#left-bracket {
+  -webkit-animation: bounceLeft .5s infinite alternate;
+          animation: bounceLeft .5s infinite alternate;
+}
+
+#right-bracket {
+  -webkit-animation: bounceRight .5s infinite alternate;
+          animation: bounceRight .5s infinite alternate;
+}
+
+
+
 @keyframes bounceRight {
   from {
     transform: translateX(0px);
@@ -142,6 +121,10 @@
     font-size: 8vw;
   }
 }
+
+
+
+
 
 /* .rotator {
   width: 100px;
