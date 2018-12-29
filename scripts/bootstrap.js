@@ -1,7 +1,7 @@
 $(function () {
 
   var buildChar = function(s, c) {
-    return '<span class="'+c+' blur-test">'+s+'</span>'
+    return '<span class="'+c+' blur-test">'+s+'</span>';
   };
   var buildPrimary = function(s) {
     return buildChar(s, 'primary');
@@ -29,7 +29,6 @@ $(function () {
   };
 
   var buildSet = function(s, f) {
-    // console.log(s, f)
     var result = '';
     for(c in s) {
       result += f(s.charAt(c));
@@ -89,7 +88,7 @@ $(function () {
   +'\n    }'
   +'\n    .cursor {'
   +'\n      color: white;'
-  +'\n    }'
+  +'\n    }';
   
   var jsString = ''
   +'\nfunction type(j,preTag,text,vars,cursor,colorFunction) {'
@@ -131,7 +130,7 @@ $(function () {
   +'\n  {control:buildTag},'
   +'\n  "javaCursor",'
   +'\n  colorJS'
-  +'\n);'
+  +'\n);';
 
   var htmlString  = ''
   +'\n<!DOCTYPE html>'
@@ -194,9 +193,7 @@ $(function () {
   +'\n  </div>'
   +'\n  <script src="scripts/bootstrap.js"></script>'
   +'\n</body>'
-  +'\n</html>'
-
-
+  +'\n</html>';
   
   function colorCSS (j, s, o) {
     switch (s.charAt(j)) {
@@ -239,21 +236,20 @@ $(function () {
           o.control = buildPrimary;
           o.isInt = false;
           o.isPrimary = true;
-        }
+        };
         break;
-    }
+    };
     return o;
-  }
+  };
 
   function colorJS(j, s, o) {
-    var word = ""
+    var word = "";
     var char = s.charAt(j);
     var breakTest = [" ", ",", "(", ")", "{", "}", ";", ":", "=", "!", "+", "-", "?", ".", "*"];
     while(breakTest.indexOf(s.charAt(j)) == -1 && j < s.length) {
       word += s.charAt(j++);
-    }
+    };
     word.trim();
-    // console.log(char, word);
     switch (word) {
       case "function":
         o.functionName = true;
@@ -289,11 +285,9 @@ $(function () {
           case ".":
             o.inKey = false;
             o.inLogic = false;
-            // o.varName = false;
-            // o.functionName = false;
             if(!o.inPrimary) {
               o.control = buildCursor;
-            } 
+            };
             break;
           case '"':
             if(!o.inPrimary) { //in new set of quotes
@@ -306,7 +300,7 @@ $(function () {
               o.inPrimary = false;
               o.inPrim1 = false;
               o.inPrim2 = false;
-            } //in a current set of '' quotes
+            }; //in a current set of '' quotes
             o.control = buildPrimary;
             break;
           case "'":
@@ -320,7 +314,7 @@ $(function () {
               o.inPrimary = false;
               o.inPrim1 = false;
               o.inPrim2 = false;
-            } //in a current set of "" quotes
+            }; //in a current set of "" quotes
             o.control = buildPrimary;
             break;
           default:
@@ -336,14 +330,13 @@ $(function () {
               o.control = buildValue;
             } else {
               o.control = buildCharacter;
-            } 
-
+            };
             break;
-        }
+        };
         break;
-    }
+    };
     return o;
-  }
+  };
 
   function colorHTML (j, s, o) {
     switch (s.charAt(j)) {
@@ -371,7 +364,7 @@ $(function () {
           o.inPrimary = !o.inPrimary;
         } else {
           o.control = buildCursor;
-        }
+        };
         break;
       case "=":
         if(o.control != buildPrimary) {
@@ -381,13 +374,13 @@ $(function () {
       case "&":
         if(o.control != buildPrimary) {
           o.control = buildTag;
-        } 
+        };
         break;
       case " ":
         if(o.inTag) {
           if(o.control != buildPrimary) {
             o.control = buildCharacter;
-          }
+          };
         } else {
           o.control = buildCursor;
         };
@@ -401,26 +394,26 @@ $(function () {
           o.control = buildCharacter;
         } else if(!o.inTag) {
           o.control = buildCursor;
-        }
+        };
         break;
-    }
+    };
     return o;
-  }
+  };
 
   function type(j,preTag,text,vars,cursor,colorFunction) {
     vars = colorFunction(j, text, vars);
-    var bc = byId(cursor)
+    var bc = byId(cursor);
     if(bc != null) {
       bc.remove();
-    }
+    };
     if(j < text.length) {
       preTag.insertAdjacentHTML('beforeend',buildSet(text.charAt(j), vars.control) 
-        + "<span id='"+cursor+"' class='cursor'>|</span>")
+        + "<span id='"+cursor+"' class='cursor'>|</span>");
       setTimeout(function() {
         type(j+1,preTag,text,vars,cursor,colorFunction);
-      }, 10)
+      }, 10);
     };
-  }
+  };
 
   type(
     0,
@@ -455,12 +448,12 @@ $(function () {
 
   cbootBtn.on('click', function() {
     abootModal.modal('hide');
-  })
+  });
   abootBtn.on('click', function() {
     cbootModal.modal('hide');
-  })
+  });
 
   function byId(a) {
     return document.getElementById(a);
-  }
-})
+  };
+});
