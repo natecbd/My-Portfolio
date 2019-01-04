@@ -1,5 +1,14 @@
 window.onload = function(){
 
+  // Create Element.remove() function if not exist
+  if (!('remove' in Element.prototype)) {
+    Element.prototype.remove = function() {
+        if (this.parentNode) {
+            this.parentNode.removeChild(this);
+        }
+    };
+  };
+
   var buildChar = function(s, c) {
     return '<span class="'+c+' blur-test">'+s+'</span>';
   };
