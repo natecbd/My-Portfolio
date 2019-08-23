@@ -1,0 +1,95 @@
+
+
+
+
+#store {
+  width: 75%;
+  margin-left: 25%;
+}
+
+#sideBar {
+  /* height: 500px; */
+  position: absolute;
+}
+
+
+
+#playArea {
+
+}
+
+.storeRowLeft {
+  float: left;
+  max-width: 1000px;
+}
+
+.storeRowRight {
+  float: right;
+  max-width: 1000px;
+}
+
+/* #treasureStore, #victoryStore  {
+  width: 640px;
+} */
+
+#victoryStore {
+
+}
+
+.cardPile {
+  width: 100px;
+  height: 150px;
+  background-color: azure;
+  float: left;
+  margin: 5px;
+}
+
+.title, .picture, .cardText, .cardTypes {
+  text-align: center;
+}
+
+.title {
+  margin: 5px;
+  /* min-height: 18px; */
+}
+
+.picture {
+  height: 40px;
+  background-color: grey;
+}
+
+.cardText {
+  height: 40px;
+  margin: 5px;
+}
+
+.cardTypes {
+  /* margin-left: -32px; */
+}
+
+.cost {
+  border: 1px solid black;
+  background-color: gold;
+  border-radius: 16px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  vertical-align: auto;
+  float: left;
+}
+
+.cardPile.treasure {
+  background-color: gold;
+}
+
+.cardPile.victory {
+  background-color: seagreen;
+}
+
+.cardPile.curse {
+  background-color: violet;
+}
+
+.cardPile.action {
+  background-color: lightgray;
+}
