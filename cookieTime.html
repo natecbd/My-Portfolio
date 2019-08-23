@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>Games for Alexis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="styles/cookieTime.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+  </head>
+  <body>
+    <div id="test"></div>
+
+
+    <div id="sideBar">test</div>
+    <div id="store">
+        
+      <div id="" class="storeRowLeft">
+        <div class="cardPile treasure" id='potion'>
+          <div class="title">potion</div>
+          <div class="picture"></div>
+          <div class="cardText">!</div>
+          <div class="cost">4</div>
+          <div class="cardTypes">Treasure</div>
+        </div>
+        <div class="cardPile treasure" id='copper'>
+          <div class="title">copper</div>
+          <div class="picture"></div>
+          <div class="cardText">(1)</div>
+          <div class="cost">0</div>
+          <div class="cardTypes">Treasure</div>
+        </div>
+        <div class="cardPile treasure" id='silver'>
+          <div class="title">silver</div>
+          <div class="picture"></div>
+          <div class="cardText">(2)</div>
+          <div class="cost">3</div>
+          <div class="cardTypes">Treasure</div>
+        </div>
+        <div class="cardPile treasure" id='gold'>
+          <div class="title">gold</div>
+          <div class="picture"></div>
+          <div class="cardText">(3)</div>
+          <div class="cost">6</div>
+          <div class="cardTypes">Treasure</div>
+        </div>
+
+        <div class="cardPile" data-size="10" id='cardPile_1'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+        <div class="cardPile" data-size="10" id='cardPile_2'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+        <div class="cardPile" data-size="10" id='cardPile_3'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+        <div class="cardPile" data-size="10" id='cardPile_4'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+        <div class="cardPile" data-size="10" id='cardPile_5'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+      </div>
+
+      <div id="" class="storeRowLeft">
+        <div class="cardPile curse" data-size="10" id='curse'>
+          <div class="title">curse</div>
+          <div class="picture"></div>
+          <div class="cardText">[-1]</div>
+          <div class="cost">0</div>
+          <div class="cardTypes">Victory - Curse</div>
+        </div>
+        <div class="cardPile victory" data-size="12" id='estate'>
+          <div class="title">estate</div>
+          <div class="picture"></div>
+          <div class="cardText">[1]</div>
+          <div class="cost">2</div>
+          <div class="cardTypes">Victory</div>
+        </div>
+        <div class="cardPile victory" data-size="12" id='duchy'>
+          <div class="title">duchy</div>
+          <div class="picture"></div>
+          <div class="cardText">[3]</div>
+          <div class="cost">5</div>
+          <div class="cardTypes">Victory</div>
+        </div>
+        <div class="cardPile victory" data-size="12" id='province'>
+          <div class="title">province</div>
+          <div class="picture"></div>
+          <div class="cardText">[6]</div>
+          <div class="cost">8</div>
+          <div class="cardTypes">Victory</div>
+        </div>
+
+        <div class="cardPile" data-size="10" id='cardPile_6'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+        <div class="cardPile" data-size="10" id='cardPile_7'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+        <div class="cardPile" data-size="10" id='cardPile_8'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+        <div class="cardPile" data-size="10" id='cardPile_9'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+        <div class="cardPile" data-size="10" id='cardPile_10'>
+          <div class="title"></div>
+          <div class="picture"></div>
+          <div class="cardText"></div>
+          <div class="cost"></div>
+          <div class="cardTypes"></div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <!-- <div id="playArea">
+      
+      <div class="cardPile" data-size="10" id='p1_Deck'></div>
+      <div class="cardPile" data-size="0" id='p1_Discard'></div>
+      <div class="cardPile" data-size="0" id='p1_Hand'></div>
+      
+      <div class="cardPile" data-size="10" id='p2_Deck'></div>
+      <div class="cardPile" data-size="0" id='p2_Discard'></div>
+      <div class="cardPile" data-size="0" id='p2_Hand'></div>
+      
+      <div class="cardPile" data-size="0" id='trash'>
+        <div class="title">TRASH</div>
+        <div class="picture"></div>
+        <div class="cardText"></div>
+        <div class="cost"></div>
+        <div class="cardTypes"></div>
+      </div>
+    </div> -->
+
+
+    <script src="scripts/cookieTime.js"></script>
+  </body>
+</html>
+ 
