@@ -1,0 +1,47 @@
+#chairTimer {
+  color: white;
+}
+
+#favoriteTimer {
+  color: black;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 10px;
+  background-color: rgba(228, 233, 237, .2)
+}
+
+.timer {
+  width: 100%;
+  position: absolute;
+  top: 33%;
+  text-align: center;
+  font-size: 42px;
+}
+
+#chair {
+  background-color: black;
+}
+
+#favorite {
+  background-image: url('bleps.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#heart {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  fill: red;
+  width: 50px;
+  margin-left: -25px;
+  animation: pulse 1s ease infinite;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
