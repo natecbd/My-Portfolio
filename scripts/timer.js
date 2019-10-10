@@ -2,7 +2,7 @@ window.onload = function(){
 
   var chairTimer = byId('chairTimer');
   var faveTimer = byId('favoriteTimer')
-  var chairDay = new Date("10/08/2019 17:15")
+  var chairDay = new Date("11/19/2019 20:00")
   var favoriteDay = new Date("11/18/2019 17:00")
   if(faveTimer != null)
     tick(favoriteDay, faveTimer, 0);
